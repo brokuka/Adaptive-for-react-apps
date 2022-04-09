@@ -1,0 +1,152 @@
+@import "vars";
+
+@mixin stroke($color: #000, $size: 1px) {
+    text-shadow: -#{$size} -#{$size} 0 $color,
+    0 -#{$size} 0 $color,
+    #{$size} -#{$size} 0 $color,
+    #{$size} 0 0 $color,
+    #{$size} #{$size} 0 $color,
+    0 #{$size} 0 $color,
+    -#{$size} #{$size} 0 $color,
+    -#{$size} 0 0 $color;
+}
+
+@function rem($pxValue) {
+    @return math.div($pxValue, $baseFontSize) * 1rem;
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        /* Если меньше контейнера */
+        #{$property}: $startSize + px;
+
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} *((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    }
+
+    @else if $type==2 {
+        /* Если больше контейнера */
+        #{$property}: $startSize + px;
+
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+        }
+    }
+
+    @else {
+        /* Всегда */
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+    }
+}
+
+@mixin font($fontName, $fileName, $fontWeight, $fontStyle) {
+    @font-face {
+        font-family: '#{$fontName}';
+        font-display: swap;
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        src: url('../fonts/#{$fileName}.eot');
+        src: url("../fonts/#{$fileName}.eot?#iefix") format('embedded-opentype'),
+        url("../fonts/#{$fileName}.woff") format('woff'),
+        url("../fonts/#{$fileName}.woff2") format('woff2'),
+        url("../fonts/#{$fileName}.ttf") format('truetype'),
+        url("../fonts/#{$fileName}.svg##{$fontName}") format('svg');
+    }
+}
+
+@mixin calcGridPercent($value, $gridCount) {
+    flex: 0 0 auto;
+    width: calc(($value * 100% / $gridCount));
+}
+
+@mixin createCustomLayout($name, $val: $name) {
+    @media (max-width: #{$val}px) {
+        .col-#{$name}-1 {
+            @include calcGridPercent(1, 12);
+        }
+
+        .col-#{$name}-2 {
+            @include calcGridPercent(2, 12);
+        }
+
+        .col-#{$name}-3 {
+            @include calcGridPercent(3, 12);
+        }
+
+        .col-#{$name}-4 {
+            @include calcGridPercent(4, 12);
+        }
+
+        .col-#{$name}-5 {
+            @include calcGridPercent(5, 12);
+        }
+
+        .col-#{$name}-6 {
+            @include calcGridPercent(6, 12);
+        }
+
+        .col-#{$name}-7 {
+            @include calcGridPercent(7, 12);
+        }
+
+        .col-#{$name}-8 {
+            @include calcGridPercent(8, 12);
+        }
+
+        .col-#{$name}-9 {
+            @include calcGridPercent(9, 12);
+        }
+
+        .col-#{$name}-10 {
+            @include calcGridPercent(10, 12);
+        }
+
+        .col-#{$name}-11 {
+            @include calcGridPercent(11, 12);
+        }
+
+        .col-#{$name}-12 {
+            @include calcGridPercent(12, 12);
+        }
+    }
+
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}px) {
+        @content;
+    }
+}
+
+@mixin smDesktop {
+    @media (max-width: #{$desktopSm}px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}px) {
+        @content;
+    }
+}
+
+@mixin bgDesktop {
+    @media (max-width: #{$desktopLg}px) {
+        @content;
+    }
+}
+
+@mixin customMedia($val) {
+    @media (max-width: #{$val}px) {
+        @content;
+    }
+}

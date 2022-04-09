@@ -1,0 +1,114 @@
+.pizza-list {
+
+
+	&__title {
+		margin-bottom: 3.5rem;
+
+		font-size: 3.2rem;
+		color: $black;
+		font-weight: 700;
+	}
+
+	.row {
+		@include adaptiveValue(row-gap, 65, 45, 1);
+	}
+}
+
+.pizza-list__item {
+	max-width: 280px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.pizza-item__header {
+	img {
+		margin: 0 auto;
+	}
+}
+
+.pizza-item__content {
+	margin-bottom: 1.7rem;
+
+	.list-group {
+		padding: 7px;
+
+		background-color: #F3F3F3;
+		border-radius: 10px;
+
+		font-size: 1.4rem;
+		color: #2C2C2C;
+		font-weight: 700;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 5.73px;
+
+			&.pizza-size-list {
+				li::after {
+					content: " см.";
+				}
+			}
+		}
+
+		li {
+			flex: 1 1 auto;
+			padding: .5em 1.3em;
+
+			text-align: center;
+			cursor: pointer;
+
+			&:hover:not(.active) {
+				outline: dotted $orange;
+			}
+
+			&.active {
+				background-color: $white;
+
+				box-shadow: 0px 2px 4px rgba($black, 0.04);
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+.pizza-item__title {
+	margin: 1.1rem 0 2.2rem;
+
+	font-size: 2rem;
+	color: $black;
+	font-weight: 800;
+	text-align: center;
+}
+
+.pizza-texture-list {
+	margin-bottom: 7px;
+}
+
+.pizza-item__footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+
+	.icon__plus {
+		margin-right: 5px;
+	}
+}
+
+.pizza-item__price {
+	font-size: 2.2rem;
+	color: $black;
+	font-weight: 700;
+
+	&::before {
+		content: "от ";
+	}
+
+	&::after {
+		content: " \20BD";
+	}
+}

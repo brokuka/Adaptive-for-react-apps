@@ -1,0 +1,142 @@
+@use 'sass:math';
+
+@import './mixins';
+@import './vars';
+
+.container {
+	max-width: 100%;
+	width: #{$container}px;
+	margin: 0 auto;
+	padding: 0 #{math.div($containerPadding, 2)}px;
+}
+
+.container-xl {
+	@include adaptiveValue(width, 1340, 320, 1);
+	@include adaptiveValue(margin-top, 50, 25, 1);
+	@include adaptiveValue(margin-bottom, 50, 25, 1);
+	@include adaptiveValue(padding, 40, 20, 1);
+
+	border-radius: 1rem;
+	background: $white;
+	box-shadow: 0px 15px 20px rgba($black, 0.03);
+}
+
+.container-sm {
+	@include adaptiveValue(width, 851, 320, 1);
+}
+
+.row {
+	$gutter: .5rem;
+
+	display: flex !important;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 #{-$gutter};
+
+	&.jcsa {
+		justify-content: space-around;
+	}
+
+	&.jcsb {
+		justify-content: space-between;
+	}
+
+	&.jcc {
+		justify-content: center;
+	}
+
+	&.fdc {
+		flex-direction: column;
+	}
+
+	&.aic {
+		align-items: center;
+	}
+
+	&>[class*=col] {
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 100%;
+		padding: 0 $gutter;
+
+		@include mobile {
+			padding: 0;
+		}
+	}
+
+	.item {
+		padding: 1rem;
+		background-color: rgba(39, 41, 43, 0.03);
+		border: 1px solid rgba(39, 41, 43, 0.1);
+	}
+
+	.col {
+		flex: 1 0 0%;
+	}
+
+	.col-auto {
+		width: auto;
+	}
+
+	.col-1 {
+		@include calcGridPercent(1, 12);
+	}
+
+	.col-2 {
+		@include calcGridPercent(2, 12);
+	}
+
+	.col-3 {
+		@include calcGridPercent(3, 12);
+	}
+
+	.col-4 {
+		@include calcGridPercent(4, 12);
+	}
+
+	.col-5 {
+		@include calcGridPercent(5, 12);
+	}
+
+	.col-6 {
+		@include calcGridPercent(6, 12);
+	}
+
+	.col-7 {
+		@include calcGridPercent(7, 12);
+	}
+
+	.col-8 {
+		@include calcGridPercent(8, 12);
+	}
+
+	.col-9 {
+		@include calcGridPercent(9, 12);
+	}
+
+	.col-10 {
+		@include calcGridPercent(10, 12);
+	}
+
+	.col-11 {
+		@include calcGridPercent(11, 12);
+	}
+
+	.col-12 {
+		@include calcGridPercent(12, 12);
+	}
+
+	@include createCustomLayout(ds, $desktop);
+	@include createCustomLayout(sd, $desktopSm);
+	@include createCustomLayout(930);
+	@include createCustomLayout(tb, $tablet);
+	@include createCustomLayout(630);
+	@include createCustomLayout(mb, $mobile);
+}
+
+.grid {
+	max-width: 700px;
+	margin: 0 auto;
+
+	border: 1px solid #eee;
+}
