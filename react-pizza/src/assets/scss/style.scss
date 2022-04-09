@@ -1,0 +1,49 @@
+@use 'sass:math';
+
+@import './helpers';
+@import './mixins';
+@import './fonts';
+@import './vars';
+@import './grid';
+
+html {
+    font-size: #{$baseFontSize}px;
+}
+
+body {
+    background-color: $mainColor;
+
+    font-family: $defaultFont;
+    font-weight: $defaultFontWeight;
+    font-size: $defaultFontSize;
+}
+
+.page {
+    min-height: 100vh;
+    @include adaptiveValue(padding-top, 50, 25, 1);
+    @include adaptiveValue(padding-bottom, 50, 25, 1);
+}
+
+.wrapper {
+    max-width: 1340px;
+    width: calc(100vw - 15px);
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @include adaptiveValue(padding, 40, 20, 1);
+
+    border-radius: 1rem;
+    background: $white;
+    box-shadow: 0px 15px 20px rgba($black, 0.03);
+}
+
+/* Blocks */
+@import "./blocks/header";
+@import "./blocks/btn";
+@import "./blocks/filters";
+@import "./blocks/pizzalist";
+@import "./blocks/icon";
+@import "./blocks/cart";
+
+
+/* Vendor libs */
