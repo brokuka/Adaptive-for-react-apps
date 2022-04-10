@@ -4,8 +4,7 @@
 
 ## react-pizza
 > ### Ссылки:
-> * #### Demo
-> https://tmp-react-pizza.netlify.app
+> * #### [Demo](https://tmp-react-pizza.netlify.app)
 > ---
 > * PageSpeed:
 > https://pagespeed.web.dev/report?url=https%3A%2F%2Ftmp-react-pizza.netlify.app
