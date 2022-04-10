@@ -37,6 +37,17 @@ body {
     box-shadow: 0px 15px 20px rgba($black, 0.03);
 }
 
+.container {
+    max-width: 100%;
+    width: #{$container}px;
+    margin: 0 auto;
+    padding: 0 #{math.div($containerPadding, 2)}px;
+}
+
+.container-sm {
+    @include adaptiveValue(width, 851, 320, 1);
+}
+
 /* Blocks */
 @import "./blocks/header";
 @import "./blocks/btn";
