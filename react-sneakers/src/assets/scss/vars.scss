@@ -1,0 +1,40 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+
+
+/* Font */
+$baseFontSize: 10;
+$defaultFont: system-ui,
+-apple-system,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+"Liberation Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji";
+$defaultFontSize: rem(10);
+$defaultFontWeight: 400;
+
+
+/* Container */
+$maxWidthContainer: 1441;
+$container: 1142;
+$containerPadding: 30;
+
+
+/* Background */
+$bgParam: no-repeat center / cover;
+
+
+/* Responsive */
+$mobile: 576;
+$tablet: 767.98;
+$desktopSm: 991.98;
+$desktop: 1199.98;
+$desktopLg: 1399.98;
