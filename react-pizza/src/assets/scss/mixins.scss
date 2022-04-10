@@ -57,64 +57,6 @@
     }
 }
 
-@mixin calcGridPercent($value, $gridCount) {
-    flex: 0 0 auto;
-    width: calc(($value * 100% / $gridCount));
-}
-
-@mixin createCustomLayout($name, $val: $name) {
-    @media (max-width: #{$val}px) {
-        .col-#{$name}-1 {
-            @include calcGridPercent(1, 12);
-        }
-
-        .col-#{$name}-2 {
-            @include calcGridPercent(2, 12);
-        }
-
-        .col-#{$name}-3 {
-            @include calcGridPercent(3, 12);
-        }
-
-        .col-#{$name}-4 {
-            @include calcGridPercent(4, 12);
-        }
-
-        .col-#{$name}-5 {
-            @include calcGridPercent(5, 12);
-        }
-
-        .col-#{$name}-6 {
-            @include calcGridPercent(6, 12);
-        }
-
-        .col-#{$name}-7 {
-            @include calcGridPercent(7, 12);
-        }
-
-        .col-#{$name}-8 {
-            @include calcGridPercent(8, 12);
-        }
-
-        .col-#{$name}-9 {
-            @include calcGridPercent(9, 12);
-        }
-
-        .col-#{$name}-10 {
-            @include calcGridPercent(10, 12);
-        }
-
-        .col-#{$name}-11 {
-            @include calcGridPercent(11, 12);
-        }
-
-        .col-#{$name}-12 {
-            @include calcGridPercent(12, 12);
-        }
-    }
-
-}
-
 @mixin mobile {
     @media (max-width: #{$mobile}px) {
         @content;
