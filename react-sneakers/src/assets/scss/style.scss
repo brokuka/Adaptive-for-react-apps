@@ -1,0 +1,75 @@
+@use 'sass:math';
+
+@import './helpers';
+@import './mixins';
+@import './fonts';
+@import './vars';
+@import './grid';
+
+html {
+    font-size: #{$baseFontSize}px;
+}
+
+body {
+    font-family: $defaultFont;
+    font-weight: $defaultFontWeight;
+    font-size: $defaultFontSize;
+    // overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    @include adaptiveValue(padding-top, 85, 20, 1);
+    @include adaptiveValue(padding-bottom, 40, 20, 1);
+
+    background-color: #E7F6FF;
+    overflow: hidden;
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 100%;
+    min-height: 80vh;
+
+    width: calc(100vw - 15px);
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 45px;
+    // @include adaptiveValue(padding, 60, 20, 1);
+
+
+    border-radius: 2rem;
+    background: $white;
+    box-shadow: 0px 10px 20px rgba($black, 0.04);
+
+    &__title {
+        font-size: 3.2rem;
+        color: $black;
+        font-weight: 700;
+    }
+}
+
+.container {
+    max-width: 100%;
+    width: #{$container}px;
+    margin: 0 auto;
+    padding: 0 #{math.div($containerPadding, 2)}px;
+}
+
+.container-sm {
+    @include adaptiveValue(width, 851, 320, 1);
+}
+
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/slider";
+@import "blocks/sneakers";
+@import "blocks/cart";
+@import "blocks/orders";
+@import "blocks/bookmarks";
+@import "blocks/btn";
+@import "blocks/icon";
+
+
+/* Vendor libs */

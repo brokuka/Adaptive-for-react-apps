@@ -1,0 +1,78 @@
+@import "vars";
+
+
+@function rem($pxValue) {
+    @return math.div($pxValue, $baseFontSize) * 1rem;
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $type) {
+    $addSize: $startSize - $minSize;
+
+    @if $type==1 {
+        /* Если меньше контейнера */
+        #{$property}: $startSize + px;
+
+        @media (max-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} *((100vw - 320px) / #{$maxWidthContainer - 320}));
+        }
+    }
+
+    @else if $type==2 {
+        /* Если больше контейнера */
+        #{$property}: $startSize + px;
+
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+        }
+    }
+
+    @else {
+        /* Всегда */
+        #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+    }
+}
+
+@mixin font($fontName, $fileName, $fontWeight, $fontStyle) {
+    @font-face {
+        font-family: '#{$fontName}';
+        font-display: swap;
+        font-weight: $fontWeight;
+        font-style: $fontStyle;
+        src: url('../fonts/#{$fileName}.eot');
+        src: url("../fonts/#{$fileName}.eot?#iefix") format('embedded-opentype'),
+        url("../fonts/#{$fileName}.woff") format('woff'),
+        url("../fonts/#{$fileName}.woff2") format('woff2'),
+        url("../fonts/#{$fileName}.ttf") format('truetype'),
+        url("../fonts/#{$fileName}.svg##{$fontName}") format('svg');
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}px) {
+        @content;
+    }
+}
+
+@mixin smDesktop {
+    @media (max-width: #{$desktopSm}px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}px) {
+        @content;
+    }
+}
+
+@mixin bgDesktop {
+    @media (max-width: #{$desktopLg}px) {
+        @content;
+    }
+}

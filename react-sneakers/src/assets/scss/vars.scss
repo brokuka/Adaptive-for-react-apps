@@ -1,0 +1,28 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+
+
+/* Font */
+$baseFontSize: 10;
+$defaultFont: 'Inter', system-ui;
+$defaultFontSize: rem(10);
+$defaultFontWeight: 400;
+
+
+/* Container */
+$maxWidthContainer: 1250;
+$container: 960;
+$containerPadding: 30;
+
+
+/* Background */
+$bgParam: no-repeat center / cover;
+
+
+/* Responsive */
+$mobile: 576;
+$tablet: 767.98;
+$desktopSm: 991.98;
+$desktop: 1199.98;
+$desktopLg: 1399.98;

@@ -1,0 +1,35 @@
+.bookmarks {
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	.btn--prev,
+	.btn--next {
+		box-shadow: none;
+		border: 1px solid #F3F3F3;
+		border-radius: 8px;
+
+		&:hover {
+			border-color: #C4C4C4;
+
+			.arrow-icon {
+				stroke: $black;
+			}
+		}
+	}
+
+	.sneakers__item-header {
+		.btn--item-add {
+			background-color: #FEF0F0;
+		}
+
+
+		.favorite-icon {
+			fill: #FF8585;
+			stroke: #FF8585;
+		}
+	}
+}

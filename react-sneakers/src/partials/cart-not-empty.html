@@ -1,0 +1,28 @@
+<div class="cart__body">
+	<div class="cart__items-group">
+		{{> cart-item}}
+		{{> cart-item}}
+		{{> cart-item}}
+		{{> cart-item}}
+		{{> cart-item}}
+		{{> cart-item}}
+	</div>
+	<div class="cart__order">
+		<div class="cart__total d-flex">
+			<div class="cart__total-title">Итого:</div>
+			<span class="cart__total-grand">21 498</span>
+		</div>
+
+		<div class="cart__tax d-flex">
+			<div class="cart__tax-title">Налог 5%:</div>
+			<span class="cart__total-tax">1074</span>
+		</div>
+		<button class="btn btn--order">
+			Оформить заказ
+			<svg class="arrow2-icon">
+				<use xlink:href="#icon-arrow2"></use>
+			</svg>
+		</button>
+	</div>
+</div>
+
