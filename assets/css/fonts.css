@@ -1,0 +1,40 @@
+/* Colors */
+/* Font */
+/* Container */
+/* Background */
+/* Responsive */
+@font-face {
+    font-family: "Inter";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/inter-v8-latin_cyrillic-regular.eot");
+  src: url("../fonts/inter-v8-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/inter-v8-latin_cyrillic-regular.woff") format("woff"), url("../fonts/inter-v8-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/inter-v8-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/inter-v8-latin_cyrillic-regular.svg#Inter") format("svg");
+}
+
+@font-face {
+    font-family: "Inter";
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/inter-v8-latin_cyrillic-500.eot");
+  src: url("../fonts/inter-v8-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/inter-v8-latin_cyrillic-500.woff") format("woff"), url("../fonts/inter-v8-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/inter-v8-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/inter-v8-latin_cyrillic-500.svg#Inter") format("svg");
+}
+
+@font-face {
+    font-family: "Inter";
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/inter-v8-latin_cyrillic-600.eot");
+  src: url("../fonts/inter-v8-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/inter-v8-latin_cyrillic-600.woff") format("woff"), url("../fonts/inter-v8-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/inter-v8-latin_cyrillic-600.ttf") format("truetype"), url("../fonts/inter-v8-latin_cyrillic-600.svg#Inter") format("svg");
+}
+
+@font-face {
+    font-family: "Inter";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/inter-v8-latin_cyrillic-700.eot");
+  src: url("../fonts/inter-v8-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/inter-v8-latin_cyrillic-700.woff") format("woff"), url("../fonts/inter-v8-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/inter-v8-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/inter-v8-latin_cyrillic-700.svg#Inter") format("svg");
+}
