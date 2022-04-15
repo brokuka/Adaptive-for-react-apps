@@ -186,35 +186,8 @@
 	}
 }
 
-// .btn--order {
-// 	width: 100%;
-// 	padding: 1.8rem 0;
-
-// 	background-color: #9DD458;
-// 	border-radius: 1.8rem;
-
-// 	font-size: 1.6rem;
-// 	color: $white;
-// 	font-weight: 600;
-
-// 	position: relative;
-// 	transition: all .2s ease;
-
-// 	&:hover {
-// 		background-color: darken(#9DD458, 15%);
-
-// 		.arrow2-icon {
-// 			transform: translate(1rem, -50%);
-// 		}
-// 	}
-
-// 	.arrow2-icon {
-// 		transition: all .2s ease;
-
-// 		position: absolute;
-// 		top: 50%;
-// 		right: 4rem;
-
-// 		transform: translateY(-50%);
-// 	}
-// }
+.btn--cart-order {
+	.arrow2-icon {
+		@include adaptiveValue(right, 40, 35, 1);
+	}
+}
