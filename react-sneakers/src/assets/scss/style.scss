@@ -14,7 +14,6 @@ body {
     font-family: $defaultFont;
     font-weight: $defaultFontWeight;
     font-size: $defaultFontSize;
-    // overflow-x: hidden;
 }
 
 .page {
@@ -35,8 +34,6 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 45px;
-    // @include adaptiveValue(padding, 60, 20, 1);
-
 
     border-radius: 2rem;
     background: $white;
@@ -70,6 +67,3 @@ body {
 @import "blocks/bookmarks";
 @import "blocks/btn";
 @import "blocks/icon";
-
-
-/* Vendor libs */
