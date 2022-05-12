@@ -1,0 +1,144 @@
+.section {
+	margin: 13rem 0;
+}
+
+.section_title {
+	@include text-h2;
+	margin-bottom: 9.2rem;
+
+	color: $black;
+}
+
+.section_new_collection {
+	.cards {
+		display: grid;
+		margin-bottom: 6.5rem;
+		grid-template-columns: repeat(3, 350px);
+		gap: 3rem;
+	}
+
+	.cards_item {
+		display: block;
+		max-width: 350px;
+		width: 100%;
+		height: 100%;
+
+		&:hover {
+
+			.card_header::after,
+			.card-arrow-icon {
+				opacity: 1;
+			}
+		}
+	}
+
+	.card_header {
+		margin-bottom: 2.4rem;
+		position: relative;
+
+		&::after {
+			@include animationEase;
+			content: "";
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+
+			opacity: 0;
+			background-color: $color-primary-hover;
+		}
+
+		.card-arrow-icon {
+			@include animationEase;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 2;
+
+			opacity: 0;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.card_footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card_title {
+		@include text-h4;
+		margin-bottom: 7px;
+
+		color: $black;
+	}
+
+	.old-price {
+		margin-right: 1rem;
+
+		text-decoration: line-through;
+	}
+
+	.old-price,
+	.new-price {
+		font-size: 1.5rem;
+		color: $color-secondary;
+		font-weight: 500;
+		line-height: 140%;
+		letter-spacing: .02em;
+
+		&::before {
+			content: "\0024";
+
+			color: inherit;
+		}
+	}
+
+	.btn-open-shop {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.section_important_to_us {
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(3, 350px);
+		gap: 3rem;
+	}
+
+	.cards_item {
+		display: block;
+		max-width: 350px;
+		width: 100%;
+		height: 100%;
+
+		&:hover {
+
+			.card_header::after,
+			.card-arrow-icon {
+				opacity: 1;
+			}
+		}
+	}
+
+	.card_icon {
+		margin-bottom: 3.7rem;
+	}
+
+	.card_title {
+		@include text-h3;
+		margin-bottom: 2.4rem;
+
+		color: $black;
+	}
+
+	.card_text {
+		@include text;
+		color: $black;
+	}
+}

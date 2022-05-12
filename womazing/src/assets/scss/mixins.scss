@@ -1,0 +1,163 @@
+@import "vars";
+
+
+@function rem($pxValue) {
+	@return math.div($pxValue, $baseFontSize) * 1rem;
+}
+
+@mixin adaptiveValue($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type==1 {
+		/* Если меньше контейнера */
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} *((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	}
+
+	@else if $type==2 {
+		/* Если больше контейнера */
+		#{$property}: $startSize + px;
+
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+		}
+	}
+
+	@else {
+		/* Всегда */
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$container - 320}));
+	}
+}
+
+@mixin font($fontName, $fileName, $fontWeight: 400, $fontStyle: normal) {
+	@font-face {
+		font-family: '#{$fontName}';
+		font-display: swap;
+		font-weight: $fontWeight;
+		font-style: $fontStyle;
+		src: url('../fonts/#{$fileName}.eot');
+		src: url("../fonts/#{$fileName}.eot?#iefix") format('embedded-opentype'),
+		url("../fonts/#{$fileName}.woff") format('woff'),
+		url("../fonts/#{$fileName}.woff2") format('woff2'),
+		url("../fonts/#{$fileName}.ttf") format('truetype'),
+		url("../fonts/#{$fileName}.svg##{$fontName}") format('svg');
+	}
+}
+
+@mixin rowGap($defaultGap, $minGap, $gutter: 1.5rem) {
+	@include adaptiveValue(row-gap, $defaultGap, $minGap, 1);
+
+	@supports not (row-gap: rem($defaultGap)) {
+		margin-top: rem(-$defaultGap);
+		margin-left: -#{$gutter};
+		margin-right: -#{$gutter};
+
+		>[class*=col] {
+			margin-top: rem($defaultGap);
+		}
+	}
+}
+
+@mixin calcGridPercent($value, $gridCount) {
+	flex: 0 0 auto;
+	width: calc(($value * 100% / $gridCount));
+}
+
+@mixin createCustomLayout($name: col, $val: $name, $size: null, $gridCount: 12) {
+	@for $i from 1 through $gridCount {
+		@if ($name==col) {
+			.col-#{$i} {
+				@include calcGridPercent($i, $gridCount);
+			}
+		}
+
+		@else {
+			@media (max-width: #{$val}px) {
+				.col-#{$name}-#{$i} {
+					@include calcGridPercent($i, $gridCount);
+				}
+			}
+		}
+	}
+}
+
+@mixin mobile {
+	@media (max-width: #{$mobile}px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: #{$tablet}px) {
+		@content;
+	}
+}
+
+@mixin smDesktop {
+	@media (max-width: #{$desktopSm}px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: #{$desktop}px) {
+		@content;
+	}
+}
+
+@mixin bgDesktop {
+	@media (max-width: #{$desktopLg}px) {
+		@content;
+	}
+}
+
+@mixin fontRegular($fontSize, $fontColor: inherit) {
+	font-size: rem($fontSize);
+	color: $fontColor;
+	font-weight: 400;
+	line-height: 140%;
+	letter-spacing: .02em;
+}
+
+@mixin text-h1 {
+	font-size: 5.5rem;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: .02em;
+}
+
+@mixin text-h2 {
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 110%;
+	letter-spacing: .02em;
+}
+
+@mixin text-h3 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: .02em;
+}
+
+@mixin text-h4 {
+	font-size: 2rem;
+	color: $black;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: .02em;
+}
+
+@mixin text {
+	font-size: 1.7rem;
+	font-weight: 500;
+	line-height: 140%;
+	letter-spacing: .02em;
+}
+
+@mixin animationEase {
+	transition: all .5s ease;
+}

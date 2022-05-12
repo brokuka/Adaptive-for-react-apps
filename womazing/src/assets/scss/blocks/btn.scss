@@ -1,0 +1,66 @@
+.btn {
+	@include animationEase;
+	display: inline-block;
+	vertical-align: top;
+
+	padding: 0;
+	cursor: pointer;
+
+	background: none;
+	border: none;
+
+	font-family: inherit;
+}
+
+.btn-mobile {
+	width: 27px;
+	height: 27px;
+
+	&:hover {
+		background-color: $color-primary;
+
+		.mobile-icon {
+			@include animationEase;
+			fill: $white;
+		}
+	}
+}
+
+.btn-group {
+	display: flex;
+}
+
+.btn-arrow-scroll {
+	padding: 19.5px 26px;
+
+	background-color: rgba($color-primary, 10%);
+}
+
+
+.btn-open-shop {
+	padding: 1.2941176470588236em 2.941176470588235em;
+
+	font-size: 1.7rem;
+	color: $white;
+	line-height: 138.9%;
+	letter-spacing: .02em;
+
+	background-color: $color-primary;
+
+	&:hover {
+		background-color: $color-primary-light;
+	}
+}
+
+.btn-ghost {
+	background: none;
+	border: 1px solid $color-primary;
+
+	color: $color-primary;
+
+	&:hover {
+		background-color: $color-primary;
+
+		color: $white;
+	}
+}

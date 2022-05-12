@@ -1,0 +1,52 @@
+/* Colors */
+$white: #fff;
+$black: #000;
+
+$color-primary: #6E9C9F;
+$color-secondary: #998E78;
+$color-grey: #D1D1D1;
+$color-ecru-white: #F1EADC;
+
+$color-primary-light: #509498;
+
+$color-primary-hover: rgba($color-primary, 64%);
+
+$shadow-header: 0px 4px 15px rgba($black, 0.05);
+
+/* Font */
+$baseFontSize: 10;
+$fontFamily: 'Raleway';
+$defaultFont: $fontFamily, system-ui,
+	-apple-system,
+	"Segoe UI",
+	Roboto,
+	"Helvetica Neue",
+	Arial,
+	"Noto Sans",
+	"Liberation Sans",
+	sans-serif,
+	"Apple Color Emoji",
+	"Segoe UI Emoji",
+	"Segoe UI Symbol",
+	"Noto Color Emoji";
+$defaultFontSize: rem(10);
+$defaultFontWeight: 400;
+
+
+/* Container */
+$maxWidthContainer: 1600;
+$containerPadding: 30;
+$container: 1110 + $containerPadding;
+$gutter: 15px;
+
+
+/* Background */
+$bgParam: no-repeat center / cover;
+
+
+/* Responsive */
+$mobile: 576;
+$tablet: 767.98;
+$desktopSm: 991.98;
+$desktop: 1199.98;
+$desktopLg: 1399.98;

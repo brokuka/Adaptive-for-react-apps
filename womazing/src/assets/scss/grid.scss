@@ -1,0 +1,60 @@
+@use 'sass:math';
+
+@import './mixins';
+@import './vars';
+
+
+.row {
+	display: flex !important;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: #{-$gutter};
+	margin-right: #{-$gutter};
+
+	&.jcsa {
+		justify-content: space-around;
+	}
+
+	&.jcsb {
+		justify-content: space-between;
+	}
+
+	&.jcc {
+		justify-content: center;
+	}
+
+	&.fdc {
+		flex-direction: column;
+	}
+
+	&.aic {
+		align-items: center;
+	}
+
+	&>[class*=col] {
+		flex-shrink: 0;
+		width: 100%;
+		max-width: 100%;
+		padding: 0 $gutter;
+
+		@include mobile {
+			padding: 0;
+		}
+	}
+
+	.col {
+		flex: 1 0 0%;
+	}
+
+	.col-auto {
+		width: auto;
+	}
+
+	@include createCustomLayout();
+	@include createCustomLayout(ds, $desktop);
+	@include createCustomLayout(sd, $desktopSm);
+	@include createCustomLayout(tb, $tablet);
+	@include createCustomLayout(mb, $mobile);
+}

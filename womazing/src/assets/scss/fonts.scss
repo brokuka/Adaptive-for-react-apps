@@ -1,0 +1,7 @@
+@import "./mixins";
+
+@include font(Raleway, raleway-v27-latin_cyrillic-400);
+@include font(Raleway, raleway-v27-latin_cyrillic-500, 500);
+@include font(Raleway, raleway-v27-latin_cyrillic-700, 700);
+@include font(Raleway, raleway-v27-latin_cyrillic-800, 800);
+@include font(Roboto, roboto-v29-latin_cyrillic-300, 300);

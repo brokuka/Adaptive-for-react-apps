@@ -1,0 +1,92 @@
+/* Colors */
+/* Font */
+/* Container */
+/* Background */
+/* Responsive */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: fill;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.text {
+  text-align: start;
+}
+.text.ac {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.d-flex.inline {
+  display: inline-flex !important;
+}
+.d-flex.jcsa {
+  justify-content: space-around;
+}
+.d-flex.jcsb {
+  justify-content: space-between;
+}
+.d-flex.jcc {
+  justify-content: center;
+}
+.d-flex.fdc {
+  flex-direction: column;
+}
+.d-flex.aic {
+  align-items: center;
+}
+
+.g-0 {
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+p:last-child {
+  margin: 0;
+}
+
+hr {
+  height: 1px;
+  margin: 35px 0 40px;
+  border: none;
+  background-color: #F6F6F6;
+}

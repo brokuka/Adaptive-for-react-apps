@@ -1,0 +1,40 @@
+@use 'sass:math';
+
+@import './helpers';
+@import './mixins';
+@import './fonts';
+@import './vars';
+@import './grid';
+
+html {
+	font-size: #{$baseFontSize}px;
+}
+
+body {
+	font-family: $defaultFont;
+	font-weight: $defaultFontWeight;
+	font-size: $defaultFontSize;
+}
+
+.page {
+	min-height: 100vh;
+	height: 5000px;
+}
+
+.container {
+	max-width: 100%;
+	width: #{$container}px;
+	margin: 0 auto;
+	padding: 0 #{math.div($containerPadding, 2)}px;
+}
+
+
+/* Blocks */
+@import "./blocks/header";
+@import "./blocks/icons";
+@import "./blocks/btn";
+@import "./blocks/intro";
+@import "./blocks/slider";
+@import "./blocks/sections";
+
+/* Vendor libs */
