@@ -35,6 +35,6 @@
     ],
     "dependencies": {
         "sass": "^1.42.1",
-        "swiper": "^7.4.1"
+        "swiper": "^7.0.9"
     }
 }

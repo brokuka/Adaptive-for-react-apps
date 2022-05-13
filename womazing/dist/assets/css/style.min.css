@@ -672,6 +672,12 @@ body {
   fill: #000;
 }
 
+.slider-arrow-icon {
+  width: 14px;
+  height: 28px;
+  stroke: #000;
+}
+
 .btn {
   transition: all 0.5s ease;
   display: inline-block;
@@ -953,6 +959,10 @@ body {
   line-height: 140%;
   letter-spacing: 0.02em;
   color: #000;
+}
+
+.section_dream_team .section_content {
+  display: grid;
 }
 
 /* Vendor libs */

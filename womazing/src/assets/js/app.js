@@ -1,7 +1,7 @@
 'use strict';
 import Swiper, { Pagination } from 'swiper';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.intro_slider', {
 	slidesPerView: 1,
 	spaceBetween: 15,
 	modules: [Pagination],

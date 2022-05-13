@@ -142,3 +142,12 @@
 		color: $black;
 	}
 }
+
+.section_dream_team {
+	.section_content {
+		display: grid;
+		// grid-template-columns: auto;
+		// grid-template-rows: 487px 331px;
+		// gap: 12.4rem;
+	}
+}
