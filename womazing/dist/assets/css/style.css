@@ -113,6 +113,17 @@ hr {
     transform: rotate(180deg);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 /* Colors */
 /* Font */
 /* Container */
@@ -740,18 +751,21 @@ body {
     padding-top: 5rem;
 }
 
-.logo {
+.header_logo {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
     align-items: center;
 }
 
-.logo span {
-    margin-left: 1.1rem;
+.header_logo span {
     font-size: 1.6rem;
-    color: #000;
     font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-left: 1.1rem;
+    color: #000;
 }
 
 .nav {
@@ -857,6 +871,37 @@ body {
     width: 28px;
     height: 28px;
     stroke: #858585;
+}
+
+.instagram_icon {
+    transition: all 0.5s ease;
+    width: 22px;
+    height: 22px;
+    fill: #000;
+}
+
+.facebook_icon {
+    transition: all 0.5s ease;
+    width: 21px;
+    height: 21px;
+    fill: #000;
+}
+
+.twitter_icon {
+    transition: all 0.5s ease;
+    width: 23px;
+    height: 23px;
+    fill: #000;
+}
+
+.mastercard_icon {
+    width: 28px;
+    height: 22px;
+}
+
+.visa_icon {
+    width: 34px;
+    height: 12px;
 }
 
 .btn {
@@ -1281,15 +1326,74 @@ body {
     background-color: #F1EADC;
 }
 
-.footer_inner {
+.footer_inner .line_1 {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.footer_inner .line_2 {
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+
+.footer_inner .line_2 a:hover {
+    text-decoration: underline;
+}
+
+.footer_inner .line_2 .list_info {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-right: 25.5rem;
+    color: #000;
+}
+
+.footer_inner .line_2 .list_info li:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+.footer_inner .line_2 .list_clothes {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    color: #000;
+}
+
+.footer_inner .line_2 .list_clothes li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.footer_inner .footer_logo {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: #000;
+}
+
+.footer_inner .footer_logo span {
+    margin-left: 1.1rem;
 }
 
 .footer_inner .items-group > a {
@@ -1299,10 +1403,44 @@ body {
     letter-spacing: 0.02em;
     display: block;
     color: #000;
+    text-align: right;
 }
 
 .footer_inner .items-group > a:hover {
     text-decoration: underline;
+}
+
+.footer_inner .items-group > a:first-child {
+    margin-bottom: 9px;
+}
+
+.footer_inner .socials_group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.footer_inner .socials_group a:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+.footer_inner .socials_group a:hover svg {
+    fill: #6E9C9F;
+}
+
+.footer_inner .payment_group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer_inner .payment_group svg:first-child {
+    margin-right: 1rem;
 }
 
 /* Vendor libs */

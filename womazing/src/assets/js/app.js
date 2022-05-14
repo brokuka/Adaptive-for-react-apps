@@ -1,5 +1,6 @@
 'use strict';
 import Swiper, { Pagination, Navigation } from 'swiper';
+import SmoothScroll from 'smooth-scroll';
 
 const introSlider = new Swiper('.intro_slider', {
 	slidesPerView: 1,
@@ -29,3 +30,5 @@ const dreamTeamSlider = new Swiper('.dream_team_slider', {
 		prevEl: ".swiper_button_prev",
 	},
 });
+
+const scroll = new SmoothScroll('a[href*="#"]');
