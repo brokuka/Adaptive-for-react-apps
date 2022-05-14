@@ -95,6 +95,17 @@ hr {
   transform: rotate(180deg);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 /* Colors */
 /* Font */
 /* Container */
@@ -1095,7 +1106,7 @@ body {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: 0.02em;
-  margin-right: 18.8rem;
+  margin-right: 25.5rem;
   color: #000;
 }
 .footer_inner .line_2 .list_info li:not(:last-child) {
@@ -1151,6 +1162,14 @@ body {
 }
 .footer_inner .socials_group a:hover svg {
   fill: #6E9C9F;
+}
+.footer_inner .payment_group {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer_inner .payment_group svg:first-child {
+  margin-right: 1rem;
 }
 
 /* Vendor libs */

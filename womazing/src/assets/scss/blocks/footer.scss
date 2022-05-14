@@ -23,7 +23,7 @@
 
 		.list_info {
 			@include text-list;
-			margin-right: 18.8rem;
+			margin-right: 25.5rem;
 
 			color: $black;
 
@@ -87,6 +87,16 @@
 			svg {
 				fill: $color-primary;
 			}
+		}
+	}
+
+	.payment_group {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		svg:first-child {
+			margin-right: 1rem;
 		}
 	}
 }
