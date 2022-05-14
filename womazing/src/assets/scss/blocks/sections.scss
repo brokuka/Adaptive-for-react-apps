@@ -146,8 +146,82 @@
 .section_dream_team {
 	.section_content {
 		display: grid;
-		// grid-template-columns: auto;
-		// grid-template-rows: 487px 331px;
-		// gap: 12.4rem;
+		grid-template-columns: 729px 255px;
+		grid-template-rows: 488px;
+		gap: 12.4rem;
+		align-items: center;
+		position: relative;
+	}
+
+
+	.content_title {
+		@include text-h3;
+		margin-bottom: 2.8rem;
+
+		color: $black;
+	}
+
+	.text-group {
+		margin-bottom: 2.8rem;
+	}
+
+	.slider {
+		position: relative;
+		max-width: max-content;
+	}
+
+	.swiper_button_prev {
+		position: absolute;
+		top: 50%;
+		left: -50px;
+		z-index: 2;
+
+		transform: translate(0, -50%)
+	}
+
+	.btn:not(:disabled) {
+		.slider_arrow_icon:hover {
+			stroke: $black;
+		}
+	}
+
+	.swiper_button_next {
+		position: absolute;
+		top: 50%;
+		right: -50px;
+		z-index: 2;
+
+		transform: translate(0, -50%)
+	}
+
+	.swiper-pagination {
+		position: absolute;
+		bottom: 61px;
+		left: 50%;
+		z-index: 2;
+
+		transform: translateX(-50%);
+
+		.swiper-pagination-bullet {
+			background-color: rgba($white, 0.36);
+
+			&-active {
+				background-color: $white;
+			}
+		}
+	}
+
+	.content_paragraph {
+		@include text;
+		color: $black;
+	}
+
+	.content_link {
+		@include text;
+		color: $color-primary;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }

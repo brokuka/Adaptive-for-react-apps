@@ -158,6 +158,28 @@
 	letter-spacing: .02em;
 }
 
+@mixin text-sm {
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 140%;
+	letter-spacing: .02em;
+}
+
+@mixin text-logo {
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.9rem;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+@mixin text-list {
+	font-size: 1.3rem;
+	font-weight: 400;
+	line-height: 140%;
+	letter-spacing: .02em;
+}
+
 @mixin animationEase {
 	transition: all .5s ease;
 }

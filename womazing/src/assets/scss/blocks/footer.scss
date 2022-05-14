@@ -1,0 +1,92 @@
+.footer {
+	padding: 10.5rem 0;
+
+	background-color: #F1EADC;
+}
+
+.footer_inner {
+	.line_1 {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 3rem;
+	}
+
+	.line_2 {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.list_info {
+			@include text-list;
+			margin-right: 18.8rem;
+
+			color: $black;
+
+			li:not(:last-child) {
+				margin-bottom: 6px;
+			}
+		}
+
+		.list_clothes {
+			@include text-list;
+			flex-grow: 1;
+
+			color: $black;
+
+			li:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.footer_logo {
+		@include text-logo;
+		display: flex;
+		align-items: center;
+		height: fit-content;
+
+		color: $black;
+
+		span {
+			margin-left: 1.1rem;
+		}
+	}
+
+	.items-group>a {
+		@include text-sm;
+		display: block;
+
+		color: $black;
+		text-align: right;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&:first-child {
+			margin-bottom: 9px;
+		}
+	}
+
+	.socials_group {
+		display: flex;
+		align-items: center;
+		margin-bottom: 3rem;
+
+		a:not(:last-child) {
+			margin-right: 1.2rem;
+		}
+
+		a:hover {
+
+			svg {
+				fill: $color-primary;
+			}
+		}
+	}
+}

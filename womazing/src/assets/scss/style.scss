@@ -18,7 +18,6 @@ body {
 
 .page {
 	min-height: 100vh;
-	height: 5000px;
 }
 
 .container {
@@ -36,5 +35,6 @@ body {
 @import "./blocks/intro";
 @import "./blocks/slider";
 @import "./blocks/sections";
+@import "./blocks/footer";
 
 /* Vendor libs */

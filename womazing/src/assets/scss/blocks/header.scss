@@ -16,16 +16,15 @@
 	padding-top: 5rem;
 }
 
-.logo {
+.header_logo {
 	display: flex;
 	align-items: center;
 
 	span {
+		@include text-logo;
 		margin-left: 1.1rem;
 
-		font-size: 1.6rem;
 		color: $black;
-		font-weight: 500;
 	}
 }
 

@@ -1,11 +1,38 @@
-<div class="swiper">
-	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<picture>
-				<source srcset="assets/images/dream_team/1.webp" type="image/webp">
-				<img src="assets/images/images/dream_team/1.jpg" alt="Dream team" width="729" height="488">
-			</picture>
+<div class="slider">
+	<div class="swiper dream_team_slider">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<picture>
+					<source srcset="assets/images/dream_team/1.webp" type="image/webp">
+					<img class="img" src="assets/images/images/dream_team/1.jpg" alt="Dream team" width="729"
+						height="488">
+				</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source srcset="assets/images/dream_team/2.webp" type="image/webp">
+					<img class="img" src="assets/images/images/dream_team/2.jpg" alt="Dream team" width="729"
+						height="488">
+				</picture>
+			</div>
+			<div class="swiper-slide">
+				<picture>
+					<source srcset="assets/images/dream_team/3.webp" type="image/webp">
+					<img class="img" src="assets/images/images/dream_team/3.jpg" alt="Dream team" width="729"
+						height="488">
+				</picture>
+			</div>
 		</div>
+		<div class="swiper-pagination"></div>
 	</div>
+	<button class="btn swiper_button_prev">
+		<svg class="slider_arrow_icon rotate-180">
+			<use xlink:href="#icon_slider_arrow"></use>
+		</svg>
+	</button>
+	<button class="btn swiper_button_next">
+		<svg class="slider_arrow_icon">
+			<use xlink:href="#icon_slider_arrow"></use>
+		</svg>
+	</button>
 </div>
-<div class="swiper-pagination"></div>

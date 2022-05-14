@@ -46,8 +46,40 @@
 	fill: $black;
 }
 
-.slider-arrow-icon {
-	width: 14px;
+.slider_arrow_icon {
+	@include animationEase;
+	width: 28px;
 	height: 28px;
-	stroke: $black;
+	stroke: #858585;
+}
+
+.instagram_icon {
+	@include animationEase;
+	width: 22px;
+	height: 22px;
+	fill: $black;
+}
+
+.facebook_icon {
+	@include animationEase;
+	width: 21px;
+	height: 21px;
+	fill: $black;
+}
+
+.twitter_icon {
+	@include animationEase;
+	width: 23px;
+	height: 23px;
+	fill: $black;
+}
+
+.mastercard_icon {
+	width: 28px;
+	height: 22px;
+}
+
+.visa_icon {
+	width: 34px;
+	height: 12px;
 }

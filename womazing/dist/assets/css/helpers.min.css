@@ -90,3 +90,7 @@ hr {
   border: none;
   background-color: #F6F6F6;
 }
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
