@@ -152,10 +152,11 @@
 }
 
 @mixin text {
-	font-size: 1.7rem;
+	@include adaptiveValue(font-size, 17, 15, 1);
 	font-weight: 500;
 	line-height: 140%;
 	letter-spacing: .02em;
+
 }
 
 @mixin text-sm {
@@ -182,4 +183,14 @@
 
 @mixin animationEase {
 	transition: all .5s ease;
+}
+
+@mixin centerGrid {
+	justify-content: center;
+
+	@include tablet {
+		grid-template-columns: repeat(auto-fill, 100%);
+		justify-items: center;
+		// grid-auto-rows: max-content
+	}
 }

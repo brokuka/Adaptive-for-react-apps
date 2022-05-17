@@ -1,16 +1,17 @@
 .intro {
 	height: 826px;
 	padding-top: 13rem;
+	position: relative;
 
 	&::after {
 		content: "";
 
 		width: 705px;
-		height: 826px;
+		height: 100%;
 
 		position: absolute;
 		top: 0;
-		right: 71px;
+		right: -28px;
 		z-index: -1;
 
 		transform: translateX(-80px);

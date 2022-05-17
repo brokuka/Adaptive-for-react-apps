@@ -1,19 +1,25 @@
 .section {
-	margin: 13rem 0;
+	@include adaptiveValue(margin-bottom, 130, 80, 1);
 }
 
 .section_title {
+	@include adaptiveValue(margin-bottom, 92, 40, 1);
 	@include text-h2;
-	margin-bottom: 9.2rem;
+	@include adaptiveValue(font-size, 40, 35, 1);
 
 	color: $black;
+
+	@include tablet {
+		text-align: center
+	}
 }
 
 .section_new_collection {
 	.cards {
+		@include centerGrid;
 		display: grid;
 		margin-bottom: 6.5rem;
-		grid-template-columns: repeat(3, 350px);
+		grid-template-columns: repeat(auto-fill, 350px);
 		gap: 3rem;
 	}
 
@@ -106,8 +112,9 @@
 
 .section_important_to_us {
 	.cards {
+		@include centerGrid;
 		display: grid;
-		grid-template-columns: repeat(3, 350px);
+		grid-template-columns: repeat(auto-fill, 350px);
 		gap: 3rem;
 	}
 
@@ -127,12 +134,13 @@
 	}
 
 	.card_icon {
-		margin-bottom: 3.7rem;
+		@include adaptiveValue(margin-bottom, 37, 15, 1);
+
 	}
 
 	.card_title {
+		@include adaptiveValue(margin-bottom, 24, 15, 1);
 		@include text-h3;
-		margin-bottom: 2.4rem;
 
 		color: $black;
 	}
@@ -141,16 +149,32 @@
 		@include text;
 		color: $black;
 	}
+
+	@include tablet {
+
+		.card_icon,
+		.card_title,
+		.card_text {
+			text-align: center
+		}
+	}
 }
 
 .section_dream_team {
 	.section_content {
+		@include centerGrid;
 		display: grid;
 		grid-template-columns: 729px 255px;
-		grid-template-rows: 488px;
-		gap: 12.4rem;
+		grid-template-rows: repeat(auto-fill, max-content);
+		@include adaptiveValue(gap, 124, 30, 1);
 		align-items: center;
 		position: relative;
+
+		grid-auto-rows: max-content;
+
+		@include tablet {
+			text-align: center;
+		}
 	}
 
 
@@ -195,8 +219,8 @@
 	}
 
 	.swiper-pagination {
+		@include adaptiveValue(bottom, 61, 41, 1);
 		position: absolute;
-		bottom: 61px;
 		left: 50%;
 		z-index: 2;
 
@@ -208,6 +232,14 @@
 			&-active {
 				background-color: $white;
 			}
+		}
+	}
+
+	@include tablet {
+
+		.swiper_button_prev,
+		.swiper_button_next {
+			display: none
 		}
 	}
 

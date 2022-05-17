@@ -1,5 +1,7 @@
 .footer {
-	padding: 10.5rem 0;
+	// padding: 10.5rem 0;
+	@include adaptiveValue(padding-top, 105, 60, 1);
+	@include adaptiveValue(padding-bottom, 105, 60, 1);
 
 	background-color: #F1EADC;
 }
@@ -10,6 +12,26 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		margin-bottom: 3rem;
+
+		@include tablet {
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.nav {
+
+		@include tablet {
+			justify-content: center;
+			margin-bottom: 2rem;
+
+			&_link {
+				&:not(:last-child) {
+					margin-right: 1rem;
+				}
+			}
+		}
 	}
 
 	.line_2 {
@@ -21,8 +43,15 @@
 			text-decoration: underline;
 		}
 
+		@include tablet {
+			align-items: baseline;
+			justify-content: center;
+		}
+
 		.list_info {
 			@include text-list;
+			max-width: 205px;
+			width: 100%;
 			margin-right: 25.5rem;
 
 			color: $black;
@@ -30,16 +59,39 @@
 			li:not(:last-child) {
 				margin-bottom: 6px;
 			}
+
+			@include tablet {
+				margin-right: 0;
+			}
 		}
 
 		.list_clothes {
 			@include text-list;
-			flex-grow: 1;
+			max-width: 70px;
+			width: 100%;
+			margin-right: auto;
 
 			color: $black;
 
 			li:not(:last-child) {
 				margin-bottom: 1rem;
+			}
+
+			@include tablet {
+				text-align: right;
+				margin-right: 0;
+				margin-left: auto;
+			}
+		}
+
+		.socials_payment {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+
+			@include tablet {
+				margin-top: 2rem;
 			}
 		}
 	}
@@ -55,6 +107,10 @@
 		span {
 			margin-left: 1.1rem;
 		}
+
+		@include tablet {
+			margin-bottom: 2rem;
+		}
 	}
 
 	.items-group>a {
@@ -68,15 +124,20 @@
 			text-decoration: underline;
 		}
 
-		&:first-child {
+		&:not(:last-child) {
 			margin-bottom: 9px;
+		}
+
+		@include tablet {
+			text-align: center;
 		}
 	}
 
 	.socials_group {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		margin-bottom: 3rem;
+		@include adaptiveValue(margin-bottom, 30, 10, 1);
 
 		a:not(:last-child) {
 			margin-right: 1.2rem;
@@ -87,6 +148,10 @@
 			svg {
 				fill: $color-primary;
 			}
+		}
+
+		@include tablet {
+			justify-content: center;
 		}
 	}
 
