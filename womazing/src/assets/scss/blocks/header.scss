@@ -10,10 +10,16 @@
 
 	@include animationEase;
 
+	@include smDesktop {
+		top: 15px;
+	}
+
 	&.fixed {
 		position: fixed;
 		background-color: $white;
 		box-shadow: $shadow-header;
+		top: 0;
+		padding: 1rem 0;
 	}
 }
 
@@ -27,8 +33,8 @@
 	position: relative;
 
 	@include tablet {
+		flex-direction: column;
 		justify-content: center;
-		padding: 0.5rem 0;
 	}
 }
 
@@ -51,6 +57,7 @@
 .header_inner>.nav {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 
 	@include tablet {
 		margin-bottom: 1rem;

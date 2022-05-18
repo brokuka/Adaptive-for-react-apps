@@ -3,14 +3,13 @@
 }
 
 .section_title {
-	@include adaptiveValue(margin-top, 92, 40, 1);
 	@include adaptiveValue(margin-bottom, 92, 40, 1);
 	@include text-h2;
 	@include adaptiveValue(font-size, 40, 35, 1);
 
 	color: $black;
 
-	@include tablet {
+	@include smDesktop {
 		text-align: center
 	}
 }
@@ -163,21 +162,13 @@
 
 .section_dream_team {
 	.section_content {
-		display: grid;
-		grid-template-columns: minmax(auto, 729px) minmax(auto, 255px);
-		gap: 2rem;
-		// grid-template-columns: repeat(auto-fill, 100%);
-
 		justify-content: space-between;
 		align-items: center;
 
-		@include tablet {
-			text-align: center;
-			// grid-template-columns: repeat(auto-fill, 100%);
-			grid-template-columns: 100%;
+		@include smDesktop {
+			justify-content: center;
 		}
 	}
-
 
 	.content_title {
 		@include text-h3;
@@ -191,14 +182,33 @@
 	}
 
 	.slider {
-		position: relative;
 		max-width: 729px;
+		width: 100%;
+		margin-right: auto;
+		position: relative;
+		padding: 0 4.7rem;
+
+		@include smDesktop {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 2rem;
+		}
+
+		@include tablet {
+			padding: 0;
+		}
+	}
+
+	.content_text {
+		@include smDesktop {
+			text-align: center;
+		}
 	}
 
 	.swiper_button_prev {
 		position: absolute;
 		top: 50%;
-		left: -50px;
+		left: 0;
 		z-index: 2;
 
 		transform: translate(0, -50%)
@@ -211,12 +221,13 @@
 	}
 
 	.swiper_button_next {
+
 		position: absolute;
 		top: 50%;
-		right: -50px;
+		right: 0;
 		z-index: 2;
 
-		transform: translate(0, -50%)
+		transform: translate(0, -50%);
 	}
 
 	.swiper-pagination {

@@ -1,8 +1,9 @@
 .intro {
 	height: 826px;
+	margin-bottom: 14rem;
 	padding-top: 13rem;
 	position: relative;
-	overflow-x: hidden;
+
 
 	&::after {
 		content: "";
@@ -19,18 +20,22 @@
 
 		background-color: $color-ecru-white;
 
-		@include tablet {
+		@include smDesktop {
 			display: none;
 		}
 	}
 
+	@include smDesktop {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+	}
+
 	@include tablet {
-		height: max-content;
+		margin-bottom: 0;
 	}
 
 	.slider {
-		display: grid;
-		grid-template-columns: 563px 410px;
 		justify-content: space-between;
 		align-items: center;
 
@@ -40,17 +45,38 @@
 
 		.btn-group {
 			@include adaptiveValue(margin-bottom, 126, 26, 1);
-			justify-content: center;
+			max-width: 385px;
+			justify-content: flex-end;
+
+			@include smDesktop {
+				justify-content: center;
+				max-width: 100%;
+			}
 		}
 
 		.swiper-wrapper {
 			@include adaptiveValue(margin-bottom, 52.5, 42.5, 1);
 		}
+
+		.swiper-pagination {
+			max-width: 385px;
+			justify-content: flex-end;
+
+			@include smDesktop {
+				justify-content: center;
+				max-width: 100%;
+			}
+		}
 	}
 }
 
+.intro_slider_text {
+	max-width: 567px;
+	width: 100%;
+}
+
 .intro_slider_image {
-	@include tablet {
+	@include smDesktop {
 		display: none;
 	}
 }
@@ -59,7 +85,7 @@
 	@include text-h1;
 	@include adaptiveValue(margin-bottom, 45, 25, 1);
 
-	@include tablet {
+	@include smDesktop {
 		text-align: center;
 	}
 }
@@ -76,8 +102,9 @@
 	letter-spacing: 0.02em;
 	text-align: right;
 
-	@include tablet {
+	@include smDesktop {
 		text-align: center;
+		margin-right: initial;
 	}
 }
 
