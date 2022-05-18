@@ -123,7 +123,7 @@
 }
 
 @mixin text-h1 {
-	font-size: 5.5rem;
+	@include adaptiveValue(font-size, 55, 35, 1);
 	font-weight: 500;
 	line-height: 110%;
 	letter-spacing: .02em;
@@ -189,7 +189,7 @@
 	justify-content: center;
 
 	@include tablet {
-		grid-template-columns: repeat(auto-fill, 100%);
+		grid-template-columns: 100%;
 		justify-items: center;
 		// grid-auto-rows: max-content
 	}

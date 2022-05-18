@@ -3,6 +3,7 @@
 }
 
 .section_title {
+	@include adaptiveValue(margin-top, 92, 40, 1);
 	@include adaptiveValue(margin-bottom, 92, 40, 1);
 	@include text-h2;
 	@include adaptiveValue(font-size, 40, 35, 1);
@@ -18,7 +19,7 @@
 	.cards {
 		@include centerGrid;
 		display: grid;
-		margin-bottom: 6.5rem;
+		@include adaptiveValue(margin-bottom, 65, 45, 1);
 		grid-template-columns: repeat(auto-fill, 350px);
 		gap: 3rem;
 	}
@@ -162,18 +163,18 @@
 
 .section_dream_team {
 	.section_content {
-		@include centerGrid;
 		display: grid;
-		grid-template-columns: 729px 255px;
-		grid-template-rows: repeat(auto-fill, max-content);
-		@include adaptiveValue(gap, 124, 30, 1);
-		align-items: center;
-		position: relative;
+		grid-template-columns: minmax(auto, 729px) minmax(auto, 255px);
+		gap: 2rem;
+		// grid-template-columns: repeat(auto-fill, 100%);
 
-		grid-auto-rows: max-content;
+		justify-content: space-between;
+		align-items: center;
 
 		@include tablet {
 			text-align: center;
+			// grid-template-columns: repeat(auto-fill, 100%);
+			grid-template-columns: 100%;
 		}
 	}
 
@@ -191,7 +192,7 @@
 
 	.slider {
 		position: relative;
-		max-width: max-content;
+		max-width: 729px;
 	}
 
 	.swiper_button_prev {
