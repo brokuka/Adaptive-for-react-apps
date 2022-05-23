@@ -49,8 +49,8 @@ ul {
     display: block;
     max-width: 100%;
     height: auto;
-    -o-object-fit: contain;
-    object-fit: contain;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .no-scroll {

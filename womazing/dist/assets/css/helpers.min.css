@@ -129,7 +129,6 @@ main {
   /* Если меньше контейнера */
   padding-top: 90px;
   flex: 1 1 auto;
-  margin-bottom: 13rem;
 }
 @media (max-width: 1600px) {
   main {

@@ -214,7 +214,8 @@
 }
 
 @mixin text {
-	@include adaptiveValue(font-size, 1.7, 1.5);
+	// @include adaptiveValue(font-size, 1.7, 1.5);
+	font-size: 1.7rem;
 	font-weight: 500;
 	line-height: 140%;
 	letter-spacing: .02em;
@@ -316,7 +317,9 @@
 }
 
 @mixin centerGrid {
-	justify-content: center;
+	@include smDesktop {
+		justify-content: center;
+	}
 
 	@include tablet {
 		grid-template-columns: 100%;

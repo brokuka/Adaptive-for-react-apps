@@ -13,16 +13,11 @@
 
 			<div class="shop_item_content">
 				<div class="row product">
-					<div class="col-6">
-						<div class="slider">
-							<picture>
-								<source srcset="assets/images/girls/collection/1.webp" type="image/webp">
-								<img class="img" src="assets/images/girls/1.jpg" alt="Girl" width="536" height="729">
-							</picture>
-						</div>
+					<div class="col-6 col-sd-6 col-tb-auto col-mb-8">
+						{{> shop_item_slider}}
 					</div>
 
-					<div class="col-auto">
+					<div class="col-auto col-sd-6 col-tb-12">
 						<div class="product_params">
 							<div class="product_price">
 								<span class="price">311</span>
@@ -42,42 +37,35 @@
 
 							<div class="product_color">
 								<h4 class="product_color_title">Выберите цвет</h4>
-								<div class="row btn-group">
-									<div class="col-auto col-sd-3">
-										<button class="btn btn-color bazaar"></button>
-									</div>
-									<div class="col-auto col-sd-3">
-										<button class="btn btn-color light-gray"></button>
-									</div>
-									<div class="col-auto col-sd-3">
-										<button class="btn btn-color american-pink"></button>
-									</div>
-									<div class="col-auto col-sd-3">
-										<button class="btn btn-color peach-orange"></button>
-									</div>
+								<div class="btn-group">
+									<button class="btn btn-color bazaar"></button>
+									<button class="btn btn-color light-gray"></button>
+									<button class="btn btn-color american-pink"></button>
+									<button class="btn btn-color peach-orange"></button>
 								</div>
 							</div>
+						</div>
 
-							<div class="product_count_cart">
-								<div class="btn-group">
-									<button class="btn btn-count">1</button>
-									<button class="btn btn-add-to-cart">Добавить в корзину</button>
-								</div>
+						<div class="product_count_cart">
+							<div class="btn-group">
+								<button class="btn btn-count">1</button>
+								<button class="btn btn-add-to-cart">Добавить в корзину</button>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="related_products">
-					<h2 class="related_products_title">Связанные товары</h2>
+			<div class="related_products">
+				<h2 class="related_products_title">Связанные товары</h2>
 
-					<div class="cards">
-						{{> card_item}}
-						{{> card_item}}
-					</div>
+				<div class="cards">
+					{{> card_item}}
+					{{> card_item}}
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 </main>
 {{> footer}}

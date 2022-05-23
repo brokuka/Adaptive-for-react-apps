@@ -26,10 +26,6 @@
 	}
 }
 
-.btn-group {
-	display: flex;
-}
-
 .btn-arrow-scroll {
 	padding: 19.5px 26px;
 
@@ -138,17 +134,17 @@
 }
 
 .btn-size {
-	@include fixedWidthHeight(41);
-
 	@include text;
 	color: $black;
 	text-align: center;
 
 	border: 1px solid $black;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: $black;
 		color: $white;
+		outline: none;
 	}
 
 	&.active {
@@ -160,10 +156,15 @@
 .btn-color {
 	@include fixedWidthHeight(41);
 	border-radius: 50%;
+	border: 2px solid transparent;
+
+	@include tablet {
+		@include fixedWidthHeight(39);
+	}
 
 	&:hover,
 	&:focus {
-		border: 1px solid $black;
+		border: 2px solid $black;
 	}
 
 	&.bazaar {

@@ -123,5 +123,4 @@ hr {
 main {
 	@include adaptiveValue(padding-top, $headerHeight, 5);
 	flex: 1 1 auto;
-	margin-bottom: 13rem;
 }

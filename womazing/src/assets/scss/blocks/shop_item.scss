@@ -21,9 +21,9 @@
 
 	.product {
 		align-items: center;
-		margin-bottom: 13rem;
+		@include adaptiveValue(margin-bottom, 13, 7);
 
-		@include smDesktop {
+		@include tablet {
 			justify-content: center;
 			flex-direction: column;
 			margin-left: 0;
@@ -35,7 +35,7 @@
 			max-height: 729px;
 			height: 100%;
 
-			@include smDesktop {
+			@include tablet {
 				margin-bottom: 2rem;
 			}
 
@@ -49,32 +49,32 @@
 	.product_price,
 	.product_size,
 	.product_color {
-		margin-bottom: 5.9rem;
+		@include adaptiveValue(margin-bottom, 5.9, 3.9);
 
-		@include smDesktop {
+		@include tablet {
 			text-align: center;
 		}
 	}
 
 	.product_price {
 		@include price(null, 2.9rem);
+
+		@include tablet {
+			@include price(null, 1rem);
+		}
 	}
 
 	.product_size,
 	.product_color {
 		.btn-group {
-			flex-wrap: wrap;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, 4.1rem);
+			grid-auto-rows: 4.1rem;
+			gap: 1.4rem;
 
-			&:not(:last-child) {
-				margin-right: 1.4rem;
-			}
-
-			@include smDesktop {
+			@include tablet {
 				justify-content: center;
-
-				&:last-child {
-					flex: 1 1 100%;
-				}
+				grid-template-columns: repeat(3, 4.1rem);
 			}
 		}
 	}
@@ -87,18 +87,12 @@
 
 	.product_count_cart {
 		.btn-group {
+			display: flex;
 			gap: 1.1rem;
+
+			@include tablet {
+				justify-content: center;
+			}
 		}
 	}
-
-	// picture {
-	// 	display: block;
-	// 	max-width: 536px;
-	// 	width: 100%;
-	// 	height: 729px;
-
-	// 	.img {
-	// 		height: 100%;
-	// 	}
-	// }
 }

@@ -1,6 +1,10 @@
 .related_products_title {
-	margin-bottom: 6.7rem;
+	@include adaptiveValue(margin-bottom, 6.7, 3.7);
 
 	@include text-h2;
 	color: $black;
+
+	@include smDesktop {
+		text-align: center;
+	}
 }

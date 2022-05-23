@@ -46,6 +46,7 @@
 		}
 
 		.btn-group {
+			display: flex;
 			@include adaptiveValue(margin-bottom, 12.6, 2.6);
 			max-width: 385px;
 			justify-content: flex-end;
