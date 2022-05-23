@@ -1,19 +1,26 @@
+@charset "UTF-8";
 /* Colors */
 /* Font */
 /* Container */
 /* Background */
+/* Header */
 /* Responsive */
+/* Сделать расстояния между колонками! */
+/* @mixin columnGap($defaultGap, $minGap, $gutter: 1.5rem) {
+	@include adaptiveValue(column-gap, $defaultGap, $minGap, 1);
+
+	@supports not (column-gap: rem($defaultGap)) {}
+} */
 /* Colors */
 /* Font */
 /* Container */
 /* Background */
+/* Header */
 /* Responsive */
 .row {
   display: flex !important;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: -15px;
   margin-right: -15px;
 }

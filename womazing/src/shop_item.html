@@ -1,0 +1,83 @@
+{{> header}}
+<main>
+	<div class="shop_item">
+		<div class="container">
+			<div class="shop_item_header">
+				<h1 class="item_title">Свитшот Sweet Shot</h1>
+				<span class="breadcrumbs">
+					<a class="breadcrumbs_link" href="/index.html">Главная</a>
+					<a class="breadcrumbs_link" href="/shop.html">Свитшоты</a>
+					<a class="breadcrumbs_link active" href="">Свитшот Sweet Shot</a>
+				</span>
+			</div>
+
+			<div class="shop_item_content">
+				<div class="row product">
+					<div class="col-6">
+						<div class="slider">
+							<picture>
+								<source srcset="assets/images/girls/collection/1.webp" type="image/webp">
+								<img class="img" src="assets/images/girls/1.jpg" alt="Girl" width="536" height="729">
+							</picture>
+						</div>
+					</div>
+
+					<div class="col-auto">
+						<div class="product_params">
+							<div class="product_price">
+								<span class="price">311</span>
+								<span class="old_price">450</span>
+							</div>
+
+							<div class="product_size">
+								<h4 class="product_size_title">Выберите размер</h4>
+								<div class="btn-group">
+									<button class="btn btn-size">S</button>
+									<button class="btn btn-size">M</button>
+									<button class="btn btn-size">L</button>
+									<button class="btn btn-size">XL</button>
+									<button class="btn btn-size">XXL</button>
+								</div>
+							</div>
+
+							<div class="product_color">
+								<h4 class="product_color_title">Выберите цвет</h4>
+								<div class="row btn-group">
+									<div class="col-auto col-sd-3">
+										<button class="btn btn-color bazaar"></button>
+									</div>
+									<div class="col-auto col-sd-3">
+										<button class="btn btn-color light-gray"></button>
+									</div>
+									<div class="col-auto col-sd-3">
+										<button class="btn btn-color american-pink"></button>
+									</div>
+									<div class="col-auto col-sd-3">
+										<button class="btn btn-color peach-orange"></button>
+									</div>
+								</div>
+							</div>
+
+							<div class="product_count_cart">
+								<div class="btn-group">
+									<button class="btn btn-count">1</button>
+									<button class="btn btn-add-to-cart">Добавить в корзину</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="related_products">
+					<h2 class="related_products_title">Связанные товары</h2>
+
+					<div class="cards">
+						{{> card_item}}
+						{{> card_item}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+{{> footer}}

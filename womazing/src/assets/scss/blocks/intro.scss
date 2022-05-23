@@ -1,15 +1,17 @@
+.main {
+	position: relative;
+}
+
 .intro {
 	height: 826px;
 	margin-bottom: 14rem;
-	padding-top: 13rem;
-	position: relative;
-
+	@include adaptiveValue(padding-top, 4, 0);
 
 	&::after {
 		content: "";
 
 		width: 757px;
-		height: 100%;
+		height: inherit;
 
 		position: absolute;
 		top: 0;
@@ -44,7 +46,7 @@
 		}
 
 		.btn-group {
-			@include adaptiveValue(margin-bottom, 126, 26, 1);
+			@include adaptiveValue(margin-bottom, 12.6, 2.6);
 			max-width: 385px;
 			justify-content: flex-end;
 
@@ -55,7 +57,7 @@
 		}
 
 		.swiper-wrapper {
-			@include adaptiveValue(margin-bottom, 52.5, 42.5, 1);
+			@include adaptiveValue(margin-bottom, 5.2, 4.2);
 		}
 
 		.swiper-pagination {
@@ -67,6 +69,10 @@
 				max-width: 100%;
 			}
 		}
+	}
+
+	.img {
+		margin-left: auto;
 	}
 }
 
@@ -83,7 +89,7 @@
 
 .intro-title {
 	@include text-h1;
-	@include adaptiveValue(margin-bottom, 45, 25, 1);
+	@include adaptiveValue(margin-bottom, 4.5, 2.5);
 
 	@include smDesktop {
 		text-align: center;
@@ -106,8 +112,4 @@
 		text-align: center;
 		margin-right: initial;
 	}
-}
-
-.img {
-	margin-left: auto;
 }

@@ -17,8 +17,9 @@ body {
 }
 
 .page {
+	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
-	// overflow-x: hidden;
 }
 
 .container {
@@ -37,5 +38,10 @@ body {
 @import "./blocks/slider";
 @import "./blocks/sections";
 @import "./blocks/footer";
+@import "./blocks/shop";
+@import "./blocks/shop_item";
+@import "./blocks/breadcrumbs";
+@import "./blocks/cards";
+@import "./blocks/related_products";
 
 /* Vendor libs */

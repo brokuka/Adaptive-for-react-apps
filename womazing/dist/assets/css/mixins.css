@@ -1,5 +1,13 @@
+@charset "UTF-8";
 /* Colors */
 /* Font */
 /* Container */
 /* Background */
+/* Header */
 /* Responsive */
+/* Сделать расстояния между колонками! */
+/* @mixin columnGap($defaultGap, $minGap, $gutter: 1.5rem) {
+	@include adaptiveValue(column-gap, $defaultGap, $minGap, 1);
+
+	@supports not (column-gap: rem($defaultGap)) {}
+} */

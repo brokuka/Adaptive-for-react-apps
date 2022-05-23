@@ -1,0 +1,22 @@
+{{> header}}
+
+<main>
+	<div class="shop">
+		<div class="container">
+			<div class="shop_header">
+				<h1 class="shop_title">Магазин</h1>
+				<span class="breadcrumbs">
+					<a class="breadcrumbs_link" href="">Главная</a>
+					<a class="breadcrumbs_link active" href="">Магазин</a>
+				</span>
+			</div>
+
+			<div class="shop_content">
+				{{> shop_filter}}
+				{{> shop_catalog}}
+			</div>
+		</div>
+	</div>
+</main>
+
+{{> footer}}

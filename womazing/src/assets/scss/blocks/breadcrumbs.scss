@@ -1,0 +1,42 @@
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem 3.5rem;
+
+	@include smDesktop {
+		justify-content: center;
+	}
+}
+
+.breadcrumbs_link {
+	@include text;
+	color: $black;
+
+	position: relative;
+
+	&:not(:last-child)::after {
+		content: "";
+		display: inline-block;
+
+		position: absolute;
+		top: 50%;
+		right: -2.5rem;
+
+		transform: translateY(-50%);
+
+		width: 16px;
+		height: 1px;
+
+		background-color: $black;
+		pointer-events: none;
+	}
+
+	&.active {
+		color: #909090;
+		pointer-events: none;
+	}
+
+	&:hover:not(.active) {
+		text-decoration: underline;
+	}
+}

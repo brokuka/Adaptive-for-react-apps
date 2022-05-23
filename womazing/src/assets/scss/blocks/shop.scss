@@ -1,0 +1,51 @@
+.shop {
+	margin-bottom: 13rem;
+	@include adaptiveValue(margin-top, 19, 13);
+
+	flex: 1 1 auto;
+}
+
+.shop_header {
+	@include adaptiveValue(margin-bottom, 21.4, 5.4);
+}
+
+.shop_title {
+	margin-bottom: 2.6rem;
+
+	@include text-h1;
+	color: $black;
+}
+
+.shop_filters {
+	@include adaptiveValue(margin-bottom, 9.2, 3.2);
+	overflow-x: auto;
+
+	.btn-group {
+		gap: 1rem;
+	}
+}
+
+.shop_catalog {
+	.items_count {
+		display: inline-block;
+		margin-bottom: 6.5rem;
+
+		@include text;
+		color: #808080;
+	}
+
+	.items_showed::after {
+		content: " из";
+		pointer-events: none;
+	}
+
+	.items_all::after {
+		content: " товаров";
+		pointer-events: none;
+	}
+
+	.btn-group {
+		justify-content: center;
+		gap: 1.4rem;
+	}
+}

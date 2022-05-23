@@ -1,7 +1,7 @@
 .footer {
 	// padding: 10.5rem 0;
-	@include adaptiveValue(padding-top, 105, 60, 1);
-	@include adaptiveValue(padding-bottom, 105, 60, 1);
+	@include adaptiveValue(padding-top, 10.5, 6);
+	@include adaptiveValue(padding-bottom, 10.5, 6);
 
 	background-color: #F1EADC;
 }
@@ -11,7 +11,7 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 
 		@include tablet {
 			justify-content: center;
@@ -21,38 +21,63 @@
 	}
 
 	.nav {
+		@include text-nav;
+		display: flex;
+		flex-wrap: wrap;
+		word-break: break-all;
+		@include adaptiveValue(column-gap, 4.5, 2.5);
+		row-gap: 1rem;
 
 		@include tablet {
 			justify-content: center;
 			margin-bottom: 2rem;
+		}
 
-			&_link {
-				&:not(:last-child) {
-					margin-right: 1rem;
-				}
+		@include mobile {
+			justify-items: center;
+		}
+
+		.nav_link {
+
+			&:not(.active):hover {
+				text-decoration: underline;
+			}
+
+			&.active {
+				color: $color-primary;
+				font-weight: 700;
 			}
 		}
 	}
 
 	.line_2 {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
+		justify-content: space-between;
 
 		a:hover {
 			text-decoration: underline;
 		}
 
 		@include tablet {
-			align-items: baseline;
-			justify-content: center;
+			align-items: center;
+			text-align: center;
+
+			[class*=col] {
+				&:nth-child(1) {
+					order: 3;
+				}
+
+				&:nth-child(2) {
+					order: 1;
+				}
+
+				&:nth-child(3) {
+					order: 2;
+				}
+			}
 		}
 
 		.list_info {
 			@include text-list;
-			max-width: 205px;
-			width: 100%;
-			margin-right: 25.5rem;
 
 			color: $black;
 
@@ -67,9 +92,6 @@
 
 		.list_clothes {
 			@include text-list;
-			max-width: 70px;
-			width: 100%;
-			margin-right: auto;
 
 			color: $black;
 
@@ -78,20 +100,21 @@
 			}
 
 			@include tablet {
-				text-align: right;
-				margin-right: 0;
-				margin-left: auto;
+				display: none;
+				margin-bottom: 2rem;
+				text-align: center;
 			}
 		}
 
 		.socials_payment {
 			display: flex;
-			justify-content: center;
 			flex-direction: column;
-			align-items: center;
+			justify-content: flex-end;
+			align-items: flex-end;
 
 			@include tablet {
-				margin-top: 2rem;
+				margin-bottom: 2rem;
+				align-items: center;
 			}
 		}
 	}
@@ -137,7 +160,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		@include adaptiveValue(margin-bottom, 30, 10, 1);
+		@include adaptiveValue(margin-bottom, 3, 1);
 
 		a:not(:last-child) {
 			margin-right: 1.2rem;

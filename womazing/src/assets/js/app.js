@@ -1,8 +1,8 @@
 'use strict';
 
 /* Components */
-import smoothScroll from './components/smoothScroll';
-import slider from './components/slider';
+import * as smoothScroll from './components/smoothScroll';
+import * as slider from './components/slider';
 import fixedHeader from './components/fixedHeader';
 
 document.addEventListener('DOMContentLoaded', () => {

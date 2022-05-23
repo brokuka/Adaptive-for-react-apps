@@ -1,8 +1,22 @@
+@charset "UTF-8";
 /* Colors */
 /* Font */
 /* Container */
 /* Background */
+/* Header */
 /* Responsive */
+/* Colors */
+/* Font */
+/* Container */
+/* Background */
+/* Header */
+/* Responsive */
+/* Сделать расстояния между колонками! */
+/* @mixin columnGap($defaultGap, $minGap, $gutter: 1.5rem) {
+	@include adaptiveValue(column-gap, $defaultGap, $minGap, 1);
+
+	@supports not (column-gap: rem($defaultGap)) {}
+} */
 *,
 *::before,
 *::after {
@@ -27,11 +41,15 @@ ol {
   list-style-type: none;
 }
 
+ul {
+  word-break: break-all;
+}
+
 .img {
   display: block;
   max-width: 100%;
   height: auto;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .no-scroll {
@@ -69,7 +87,8 @@ ol {
 }
 
 .g-0 {
-  margin: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 a {
@@ -104,4 +123,16 @@ hr {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+main {
+  /* Если меньше контейнера */
+  padding-top: 90px;
+  flex: 1 1 auto;
+  margin-bottom: 13rem;
+}
+@media (max-width: 1600px) {
+  main {
+    padding-top: calc(50px + 40 *((100vw - 320px) / 1280));
+  }
 }

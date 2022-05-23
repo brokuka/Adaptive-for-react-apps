@@ -1,11 +1,11 @@
 .section {
-	@include adaptiveValue(margin-bottom, 130, 80, 1);
+	@include adaptiveValue(margin-bottom, 13, 8);
 }
 
 .section_title {
-	@include adaptiveValue(margin-bottom, 92, 40, 1);
+	@include adaptiveValue(margin-bottom, 9.2, 4);
 	@include text-h2;
-	@include adaptiveValue(font-size, 40, 35, 1);
+	@include adaptiveValue(font-size, 4, 3.5);
 
 	color: $black;
 
@@ -15,95 +15,6 @@
 }
 
 .section_new_collection {
-	.cards {
-		@include centerGrid;
-		display: grid;
-		@include adaptiveValue(margin-bottom, 65, 45, 1);
-		grid-template-columns: repeat(auto-fill, 350px);
-		gap: 3rem;
-	}
-
-	.cards_item {
-		display: block;
-		max-width: 350px;
-		width: 100%;
-		height: 100%;
-
-		&:hover {
-
-			.card_header::after,
-			.card-arrow-icon {
-				opacity: 1;
-			}
-		}
-	}
-
-	.card_header {
-		margin-bottom: 2.4rem;
-		position: relative;
-
-		&::after {
-			@include animationEase;
-			content: "";
-			width: 100%;
-			height: 100%;
-
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-
-			opacity: 0;
-			background-color: $color-primary-hover;
-		}
-
-		.card-arrow-icon {
-			@include animationEase;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			z-index: 2;
-
-			opacity: 0;
-			transform: translate(-50%, -50%);
-		}
-	}
-
-	.card_footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.card_title {
-		@include text-h4;
-		margin-bottom: 7px;
-
-		color: $black;
-	}
-
-	.old-price {
-		margin-right: 1rem;
-
-		text-decoration: line-through;
-	}
-
-	.old-price,
-	.new-price {
-		font-size: 1.5rem;
-		color: $color-secondary;
-		font-weight: 500;
-		line-height: 140%;
-		letter-spacing: .02em;
-
-		&::before {
-			content: "\0024";
-
-			color: inherit;
-		}
-	}
-
 	.btn-open-shop {
 		display: block;
 		margin: 0 auto;
@@ -134,12 +45,12 @@
 	}
 
 	.card_icon {
-		@include adaptiveValue(margin-bottom, 37, 15, 1);
+		@include adaptiveValue(margin-bottom, 3.7, 1.5);
 
 	}
 
 	.card_title {
-		@include adaptiveValue(margin-bottom, 24, 15, 1);
+		@include adaptiveValue(margin-bottom, 2.4, 1.5);
 		@include text-h3;
 
 		color: $black;
@@ -231,7 +142,7 @@
 	}
 
 	.swiper-pagination {
-		@include adaptiveValue(bottom, 61, 41, 1);
+		@include adaptiveValue(bottom, 6.1, 4.1);
 		position: absolute;
 		left: 50%;
 		z-index: 2;
