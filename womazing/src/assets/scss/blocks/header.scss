@@ -10,10 +10,6 @@
 
 	@include animationEase;
 
-	@include smDesktop {
-		top: 15px;
-	}
-
 	&.fixed {
 		position: fixed;
 		background-color: $white;

@@ -94,26 +94,79 @@
 	}
 }
 
-@mixin rowGap($defaultGap, $minGap, $gutter: 1.5rem) {
-	@include adaptiveValue(row-gap, $defaultGap, $minGap, 1);
+@mixin rowGap($defaultGap, $minGap: null) {
+	@if $minGap ==null {
+		row-gap: $defaultGap + rem;
+	}
 
-	@supports not (row-gap: rem($defaultGap)) {
-		margin-top: rem(-$defaultGap);
-		margin-left: -#{$gutter};
-		margin-right: -#{$gutter};
+	@else {
+		@include adaptiveValue(row-gap, $defaultGap, $minGap);
+	}
 
-		>[class*=col] {
-			margin-top: rem($defaultGap);
+	@supports not (row-gap: $defaultGap + rem) {
+		@if $minGap ==null {
+			margin-top: -$defaultGap + rem;
+		}
+
+		@else {
+			@include adaptiveValue(margin-top, -$defaultGap, -$minGap);
+		}
+
+		>* {
+			@if $minGap ==null {
+				margin-top: $defaultGap + rem;
+			}
+
+			@else {
+				@include adaptiveValue(margin-top, -$defaultGap, -$minGap);
+			}
 		}
 	}
 }
 
-/* Сделать расстояния между колонками! */
-/* @mixin columnGap($defaultGap, $minGap, $gutter: 1.5rem) {
-	@include adaptiveValue(column-gap, $defaultGap, $minGap, 1);
+@mixin columnGap($defaultGap, $minGap: null) {
+	@if $minGap ==null {
+		column-gap: $defaultGap + rem;
+	}
 
-	@supports not (column-gap: rem($defaultGap)) {}
-} */
+	@else {
+		@include adaptiveValue(column-gap, $defaultGap, $minGap);
+	}
+
+	@supports not (column-gap: $defaultGap + rem) {
+		@if $minGap ==null {
+			margin-left: $defaultGap + rem;
+		}
+
+		@else {
+			@include adaptiveValue(margin-left, $defaultGap, -$minGap);
+		}
+
+
+		&:not([dir='rtl']) {
+			>* {
+				@if $minGap ==null {
+					margin-left: -$defaultGap + rem;
+				}
+
+				@else {
+					@include adaptiveValue(margin-left, -$defaultGap, $minGap);
+				}
+			}
+		}
+
+		&[dir='rtl'] {
+			@if $minGap ==null {
+				margin-left: -$defaultGap + rem;
+			}
+
+			@else {
+				@include adaptiveValue(margin-right, -$defaultGap, $minGap);
+			}
+		}
+	}
+}
+
 
 @mixin calcGridPercent($value, $gridCount) {
 	flex: 0 0 auto;
@@ -213,9 +266,15 @@
 	letter-spacing: 0.02em;
 }
 
-@mixin text {
-	// @include adaptiveValue(font-size, 1.7, 1.5);
-	font-size: 1.7rem;
+@mixin text($adaptive: 1) {
+	@if $adaptive ==1 {
+		@include adaptiveValue(font-size, 1.7, 1.5);
+	}
+
+	else {
+		font-size: 1.7rem;
+	}
+
 	font-weight: 500;
 	line-height: 140%;
 	letter-spacing: .02em;
@@ -256,6 +315,11 @@
 	font-weight: 500;
 	line-height: 140%;
 	letter-spacing: 0.02em;
+}
+
+@mixin g-0 {
+	margin-right: 0;
+	margin-left: 0;
 }
 
 @mixin price($type: 1, $mr: 1rem, $color: $color-secondary, $td: 1) {

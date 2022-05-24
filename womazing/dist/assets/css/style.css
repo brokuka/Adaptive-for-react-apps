@@ -148,7 +148,6 @@ main {
     padding-top: 90px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    margin-bottom: 13rem;
 }
 
 @media (max-width: 1600px) {
@@ -1056,11 +1055,6 @@ body {
     fill: #fff;
 }
 
-.btn-group {
-    display: -ms-flexbox;
-    display: flex;
-}
-
 .btn-arrow-scroll {
     padding: 19.5px 26px;
     background-color: rgba(110, 156, 159, 0.1);
@@ -1119,19 +1113,12 @@ body {
 
 .btn-filter {
     padding: 1.1176470588em 3.8235294118em;
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #000;
     border: 1px solid #000;
-}
-
-@media (max-width: 1600px) {
-    .btn-filter {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
 }
 
 .btn-filter:hover {
@@ -1147,20 +1134,13 @@ body {
 .btn-pagination {
     width: 4.1rem;
     height: 4.1rem;
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #000;
     border: 1px solid #000;
     position: relative;
-}
-
-@media (max-width: 1600px) {
-    .btn-pagination {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
 }
 
 .btn-pagination:last-child:after {
@@ -1187,10 +1167,7 @@ body {
 }
 
 .btn-size {
-    width: 4.1rem;
-    height: 4.1rem;
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
@@ -1199,15 +1176,10 @@ body {
     border: 1px solid #000;
 }
 
-@media (max-width: 1600px) {
-    .btn-size {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
-}
-
-.btn-size:hover {
+.btn-size:hover, .btn-size:focus {
     background-color: #000;
     color: #fff;
+    outline: none;
 }
 
 .btn-size.active {
@@ -1219,10 +1191,18 @@ body {
     width: 4.1rem;
     height: 4.1rem;
     border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+@media (max-width: 767.98px) {
+    .btn-color {
+        width: 3.9rem;
+        height: 3.9rem;
+    }
 }
 
 .btn-color:hover, .btn-color:focus {
-    border: 1px solid #000;
+    border: 2px solid #000;
 }
 
 .btn-color.bazaar {
@@ -1319,6 +1299,8 @@ body {
 }
 
 .intro .slider .btn-group {
+    display: -ms-flexbox;
+    display: flex;
   /* Если меньше контейнера */
     margin-bottom: 126px;
     max-width: 385px;
@@ -1545,11 +1527,16 @@ body {
 }
 
 .section_important_to_us .cards {
-    -ms-flex-pack: center;
-    justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);
     gap: 3rem;
+}
+
+@media (max-width: 991.98px) {
+    .section_important_to_us .cards {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -1599,18 +1586,11 @@ body {
 }
 
 .section_important_to_us .card_text {
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #000;
-}
-
-@media (max-width: 1600px) {
-    .section_important_to_us .card_text {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
 }
 
 @media (max-width: 767.98px) {
@@ -1730,33 +1710,19 @@ body {
 }
 
 .section_dream_team .content_paragraph {
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #000;
 }
 
-@media (max-width: 1600px) {
-    .section_dream_team .content_paragraph {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
-}
-
 .section_dream_team .content_link {
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #6E9C9F;
-}
-
-@media (max-width: 1600px) {
-    .section_dream_team .content_link {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
 }
 
 .section_dream_team .content_link:hover {
@@ -2077,6 +2043,12 @@ body {
     }
 }
 
+@media (max-width: 991.98px) {
+    .shop_title {
+        text-align: center;
+    }
+}
+
 .shop_filters {
   /* Если меньше контейнера */
     margin-bottom: 92px;
@@ -2090,24 +2062,19 @@ body {
 }
 
 .shop_filters .btn-group {
+    display: -ms-flexbox;
+    display: flex;
     gap: 1rem;
 }
 
 .shop_catalog .items_count {
     display: inline-block;
     margin-bottom: 6.5rem;
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #808080;
-}
-
-@media (max-width: 1600px) {
-    .shop_catalog .items_count {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
 }
 
 .shop_catalog .items_showed::after {
@@ -2166,10 +2133,17 @@ body {
 .shop_item_content .product {
     -ms-flex-align: center;
     align-items: center;
-    margin-bottom: 13rem;
+  /* Если меньше контейнера */
+    margin-bottom: 130px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1600px) {
+    .shop_item_content .product {
+        margin-bottom: calc(70px + 60 *((100vw - 320px) / 1280));
+    }
+}
+
+@media (max-width: 767.98px) {
     .shop_item_content .product {
         -ms-flex-pack: center;
         justify-content: center;
@@ -2186,7 +2160,7 @@ body {
     height: 100%;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
     .shop_item_content .product .slider {
         margin-bottom: 2rem;
     }
@@ -2200,10 +2174,19 @@ body {
 .shop_item_content .product_price,
 .shop_item_content .product_size,
 .shop_item_content .product_color {
-    margin-bottom: 5.9rem;
+  /* Если меньше контейнера */
+    margin-bottom: 59px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1600px) {
+    .shop_item_content .product_price,
+.shop_item_content .product_size,
+.shop_item_content .product_color {
+        margin-bottom: calc(39px + 20 *((100vw - 320px) / 1280));
+    }
+}
+
+@media (max-width: 767.98px) {
     .shop_item_content .product_price,
 .shop_item_content .product_size,
 .shop_item_content .product_color {
@@ -2254,28 +2237,69 @@ body {
     margin-left: 2.9rem;
 }
 
+@media (max-width: 767.98px) {
+    .shop_item_content .product_price .price,
+.shop_item_content .product_price .old_price {
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: 0.02em;
+        color: #998E78;
+    }
+}
+
+@media (max-width: 767.98px) and (max-width: 991.98px) {
+    .shop_item_content .product_price .price,
+.shop_item_content .product_price .old_price {
+    /* Если меньше контейнера */
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767.98px) and (max-width: 991.98px) and (max-width: 1600px) {
+    .shop_item_content .product_price .price,
+.shop_item_content .product_price .old_price {
+        font-size: calc(20px + 20 *((100vw - 320px) / 1280));
+    }
+}
+
+@media (max-width: 767.98px) {
+    .shop_item_content .product_price .price::before,
+.shop_item_content .product_price .old_price::before {
+        content: "$";
+        color: inherit;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .shop_item_content .product_price .old_price {
+        color: #9C9C9C;
+        text-decoration: line-through;
+    }
+
+    .shop_item_content .product_price .old_price:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .shop_item_content .product_price .old_price:last-child {
+        margin-left: 1rem;
+    }
+}
+
 .shop_item_content .product_size .btn-group,
 .shop_item_content .product_color .btn-group {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 4.1rem);
+    grid-auto-rows: 4.1rem;
+    gap: 1.4rem;
 }
 
-.shop_item_content .product_size .btn-group:not(:last-child),
-.shop_item_content .product_color .btn-group:not(:last-child) {
-    margin-right: 1.4rem;
-}
-
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
     .shop_item_content .product_size .btn-group,
 .shop_item_content .product_color .btn-group {
         -ms-flex-pack: center;
         justify-content: center;
-    }
-
-    .shop_item_content .product_size .btn-group:last-child,
-.shop_item_content .product_color .btn-group:last-child {
-        -ms-flex: 1 1 100%;
-        flex: 1 1 100%;
+        grid-template-columns: repeat(3, 4.1rem);
     }
 }
 
@@ -2290,7 +2314,16 @@ body {
 }
 
 .shop_item_content .product_count_cart .btn-group {
+    display: -ms-flexbox;
+    display: flex;
     gap: 1.1rem;
+}
+
+@media (max-width: 767.98px) {
+    .shop_item_content .product_count_cart .btn-group {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .breadcrumbs {
@@ -2309,19 +2342,12 @@ body {
 }
 
 .breadcrumbs_link {
-  /* Если меньше контейнера */
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 500;
     line-height: 140%;
     letter-spacing: 0.02em;
     color: #000;
     position: relative;
-}
-
-@media (max-width: 1600px) {
-    .breadcrumbs_link {
-        font-size: calc(15px + 2 *((100vw - 320px) / 1280));
-    }
 }
 
 .breadcrumbs_link:not(:last-child)::after {
@@ -2348,13 +2374,18 @@ body {
 }
 
 .cards {
-    -ms-flex-pack: center;
-    justify-content: center;
     display: grid;
   /* Если меньше контейнера */
     margin-bottom: 65px;
     grid-template-columns: repeat(auto-fill, 350px);
     gap: 6.5rem 3rem;
+}
+
+@media (max-width: 991.98px) {
+    .cards {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -2461,12 +2492,25 @@ body {
 }
 
 .related_products_title {
-    margin-bottom: 6.7rem;
+  /* Если меньше контейнера */
+    margin-bottom: 67px;
     font-size: 4rem;
     font-weight: 500;
     line-height: 110%;
     letter-spacing: 0.02em;
     color: #000;
+}
+
+@media (max-width: 1600px) {
+    .related_products_title {
+        margin-bottom: calc(37px + 30 *((100vw - 320px) / 1280));
+    }
+}
+
+@media (max-width: 991.98px) {
+    .related_products_title {
+        text-align: center;
+    }
 }
 
 /* Vendor libs */

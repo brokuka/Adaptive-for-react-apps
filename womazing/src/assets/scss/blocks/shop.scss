@@ -1,23 +1,5 @@
-.shop {
-	margin-bottom: 13rem;
-	@include adaptiveValue(margin-top, 19, 13);
-
-	flex: 1 1 auto;
-}
-
 .shop_header {
 	@include adaptiveValue(margin-bottom, 21.4, 5.4);
-}
-
-.shop_title {
-	margin-bottom: 2.6rem;
-
-	@include text-h1;
-	color: $black;
-
-	@include smDesktop {
-		text-align: center;
-	}
 }
 
 .shop_filters {
@@ -26,14 +8,23 @@
 
 	.btn-group {
 		display: flex;
-		gap: 1rem;
+		@include columnGap(1);
 	}
 }
 
 .shop_catalog {
+
+	> :nth-child(1) {
+		margin-bottom: 6.5rem;
+	}
+
+	> :nth-child(3) {
+		margin-top: 6.5rem;
+		margin-bottom: 6.5rem;
+	}
+
 	.items_count {
 		display: inline-block;
-		margin-bottom: 6.5rem;
 
 		@include text;
 		color: #808080;
@@ -51,6 +42,7 @@
 
 	.btn-group {
 		justify-content: center;
-		gap: 1.4rem;
+		@include rowGap(1.4);
+		@include columnGap(1.4);
 	}
 }

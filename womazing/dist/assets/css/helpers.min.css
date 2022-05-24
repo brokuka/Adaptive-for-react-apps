@@ -2,21 +2,17 @@
 /* Colors */
 /* Font */
 /* Container */
+/* Row */
 /* Background */
 /* Header */
 /* Responsive */
 /* Colors */
 /* Font */
 /* Container */
+/* Row */
 /* Background */
 /* Header */
 /* Responsive */
-/* Сделать расстояния между колонками! */
-/* @mixin columnGap($defaultGap, $minGap, $gutter: 1.5rem) {
-	@include adaptiveValue(column-gap, $defaultGap, $minGap, 1);
-
-	@supports not (column-gap: rem($defaultGap)) {}
-} */
 *,
 *::before,
 *::after {
@@ -127,11 +123,21 @@ hr {
 
 main {
   /* Если меньше контейнера */
-  padding-top: 90px;
+  margin-bottom: 130px;
+  padding-top: 9rem;
   flex: 1 1 auto;
 }
 @media (max-width: 1600px) {
   main {
-    padding-top: calc(50px + 40 *((100vw - 320px) / 1280));
+    margin-bottom: calc(80px + 50 *((100vw - 320px) / 1280));
+  }
+}
+main.about, main.shop {
+  /* Если меньше контейнера */
+  padding-top: 190px;
+}
+@media (max-width: 1600px) {
+  main.about, main.shop {
+    padding-top: calc(150px + 40 *((100vw - 320px) / 1280));
   }
 }

@@ -1,9 +1,21 @@
+.page_title {
+	margin-bottom: 2.6rem;
+
+	@include text-h1;
+	color: $black;
+
+	@include tablet {
+		text-align: center;
+	}
+}
+
 .breadcrumbs {
 	display: flex;
 	flex-wrap: wrap;
-	gap: .5rem 3.5rem;
+	@include rowGap(.5);
+	@include columnGap(3.5);
 
-	@include smDesktop {
+	@include tablet {
 		justify-content: center;
 	}
 }

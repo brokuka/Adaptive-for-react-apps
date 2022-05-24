@@ -8,8 +8,6 @@
 	display: flex !important;
 	flex-wrap: wrap;
 	flex-direction: row;
-	margin-left: #{-$gutter};
-	margin-right: #{-$gutter};
 
 	&.jcsa {
 		justify-content: space-around;
@@ -35,7 +33,6 @@
 		flex-shrink: 0;
 		width: 100%;
 		max-width: 100%;
-		padding: 0 $gutter;
 
 		@include mobile {
 			padding: 0;

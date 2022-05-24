@@ -1,9 +1,10 @@
 .cards {
 	@include centerGrid;
 	display: grid;
-	@include adaptiveValue(margin-bottom, 6.5, 4.5);
+	// @include adaptiveValue(margin-bottom, 6.5, 4.5);
 	grid-template-columns: repeat(auto-fill, 350px);
-	gap: 6.5rem 3rem;
+	@include rowGap(6.5);
+	@include columnGap(3);
 }
 
 .cards_item {

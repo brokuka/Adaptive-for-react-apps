@@ -26,17 +26,17 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! smooth
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_smoothScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/smoothScroll */ \"./src/assets/js/components/smoothScroll.js\");\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ \"./src/assets/js/components/slider.js\");\n/* harmony import */ var _components_fixedHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fixedHeader */ \"./src/assets/js/components/fixedHeader.js\");\n/* harmony import */ var _components_fixedHeader__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_fixedHeader__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n/* Components */\r\n\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n\t_components_smoothScroll__WEBPACK_IMPORTED_MODULE_0__;\r\n\t_components_slider__WEBPACK_IMPORTED_MODULE_1__;\r\n\t(_components_fixedHeader__WEBPACK_IMPORTED_MODULE_2___default());\r\n});\r\n\n\n//# sourceURL=webpack://clear/./src/assets/js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_smoothScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/smoothScroll */ \"./src/assets/js/components/smoothScroll.js\");\n/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ \"./src/assets/js/components/slider.js\");\n/* harmony import */ var _components_gutter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/gutter */ \"./src/assets/js/components/gutter.js\");\n/* harmony import */ var _components_gutter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_gutter__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n/* Components */\r\n\r\n\r\n// import fixedHeader from './components/fixedHeader';\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n\t// smoothScroll;\r\n\t_components_slider__WEBPACK_IMPORTED_MODULE_1__;\r\n\t// fixedHeader;\r\n\t_components_gutter__WEBPACK_IMPORTED_MODULE_2__;\r\n});\r\n\n\n//# sourceURL=webpack://clear/./src/assets/js/app.js?");
 
 /***/ }),
 
-/***/ "./src/assets/js/components/fixedHeader.js":
-/*!*************************************************!*\
-  !*** ./src/assets/js/components/fixedHeader.js ***!
-  \*************************************************/
+/***/ "./src/assets/js/components/gutter.js":
+/*!********************************************!*\
+  !*** ./src/assets/js/components/gutter.js ***!
+  \********************************************/
 /***/ (function() {
 
-eval("const events = ['scroll', 'resize'];\r\n\r\nevents.forEach(event => document.addEventListener(event, () => {\r\n\tlet windowScroll = window.scrollY;\r\n\r\n\tconst header = document.querySelector(\"header\");\r\n\tconst intro = document.querySelector(\".intro\");\r\n\r\n\tconst fixedWidth = windowScroll >= (intro.scrollHeight - header.clientHeight) - 15;\r\n\r\n\theader.classList.toggle('fixed', fixedWidth);\r\n\r\n\tconsole.log(windowScroll, intro.scrollHeight, fixedWidth);\r\n}));\r\n\r\n\n\n//# sourceURL=webpack://clear/./src/assets/js/components/fixedHeader.js?");
+eval("/* Width */\r\nconst mobileW = 576;\r\nconst tabletW = 767.98;\r\nconst desktopSm = 991.98;\r\nconst desktop = 1199.98;\r\nconst desktopLg = 1399.98;\r\n\r\n/* Blocks */\r\nconst about = document.querySelector(\".about\");\r\n\r\n\r\n/* Rows */\r\nconst mainRows = document.querySelectorAll(\".row:not(.col .row)\");\r\nconst rowFooter = document.querySelector(\".footer .row\");\r\nconst rowsInCol = document.querySelectorAll(\".col .row\");\n\n//# sourceURL=webpack://clear/./src/assets/js/components/gutter.js?");
 
 /***/ }),
 

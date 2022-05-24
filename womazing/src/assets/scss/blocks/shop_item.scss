@@ -1,16 +1,5 @@
 .shop_item {
 	padding-top: 11.1rem;
-
-	.item_title {
-		margin-bottom: 2.6rem;
-
-		@include text-h1;
-		color: $black;
-
-		@include smDesktop {
-			text-align: center;
-		}
-	}
 }
 
 .shop_item_header {
@@ -70,7 +59,8 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill, 4.1rem);
 			grid-auto-rows: 4.1rem;
-			gap: 1.4rem;
+			@include rowGap(1.4);
+			@include columnGap(1.4);
 
 			@include tablet {
 				justify-content: center;
@@ -88,7 +78,8 @@
 	.product_count_cart {
 		.btn-group {
 			display: flex;
-			gap: 1.1rem;
+			@include rowGap(1.1);
+			@include columnGap(1.1);
 
 			@include tablet {
 				justify-content: center;

@@ -1,19 +1,14 @@
-@charset "UTF-8";
 /* Colors */
 /* Font */
 /* Container */
+/* Row */
 /* Background */
 /* Header */
 /* Responsive */
-/* Сделать расстояния между колонками! */
-/* @mixin columnGap($defaultGap, $minGap, $gutter: 1.5rem) {
-	@include adaptiveValue(column-gap, $defaultGap, $minGap, 1);
-
-	@supports not (column-gap: rem($defaultGap)) {}
-} */
 /* Colors */
 /* Font */
 /* Container */
+/* Row */
 /* Background */
 /* Header */
 /* Responsive */
@@ -21,8 +16,6 @@
   display: flex !important;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: -15px;
-  margin-right: -15px;
 }
 .row.jcsa {
   justify-content: space-around;
@@ -43,7 +36,6 @@
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding: 0 15px;
 }
 @media (max-width: 576px) {
   .row > [class*=col] {

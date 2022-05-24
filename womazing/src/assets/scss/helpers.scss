@@ -121,6 +121,12 @@ hr {
 }
 
 main {
-	@include adaptiveValue(padding-top, $headerHeight, 5);
+	@include adaptiveValue(margin-bottom, 13, 8);
+	padding-top: $headerHeight;
 	flex: 1 1 auto;
+
+	&.about,
+	&.shop {
+		@include adaptiveValue(padding-top, 19, 15);
+	}
 }

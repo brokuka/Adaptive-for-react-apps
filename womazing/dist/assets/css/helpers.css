@@ -148,7 +148,6 @@ main {
     padding-top: 90px;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
-    margin-bottom: 13rem;
 }
 
 @media (max-width: 1600px) {

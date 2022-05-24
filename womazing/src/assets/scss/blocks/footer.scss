@@ -26,7 +26,7 @@
 		flex-wrap: wrap;
 		word-break: break-all;
 		@include adaptiveValue(column-gap, 4.5, 2.5);
-		row-gap: 1rem;
+		@include rowGap(1);
 
 		@include tablet {
 			justify-content: center;

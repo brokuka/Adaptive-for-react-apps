@@ -1,0 +1,54 @@
+.about_header {
+	@include adaptiveValue(margin-bottom, 21.4, 8);
+}
+
+.about_content {
+	justify-content: space-between;
+	flex-direction: column;
+	@include rowGap(13, 7);
+
+	// >:not(:last-child) {
+	// 	@include adaptiveValue(margin-bottom, 13, 7);
+
+	// 	@include tablet {
+	// 		>.row {
+	// 			:first-child {
+	// 				margin-bottom: 2rem;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	.row {
+		@include rowGap(2) // gap: 2rem;
+	}
+
+	@include tablet {
+		@include g-0;
+
+		.row {
+			@include g-0;
+		}
+
+		.img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.text_title {
+		margin-bottom: 4.6rem;
+
+		@include text-h3;
+		color: $black;
+
+		@include tablet {
+			text-align: center;
+		}
+	}
+
+	.text {
+		@include text;
+		color: $black;
+	}
+}

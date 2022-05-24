@@ -1,5 +1,7 @@
 .section {
-	@include adaptiveValue(margin-bottom, 13, 8);
+	&:not(:last-child) {
+		@include adaptiveValue(margin-bottom, 13, 8);
+	}
 }
 
 .section_title {
@@ -18,6 +20,10 @@
 	.btn-open-shop {
 		display: block;
 		margin: 0 auto;
+	}
+
+	.button {
+		margin-top: 8.7rem;
 	}
 }
 
