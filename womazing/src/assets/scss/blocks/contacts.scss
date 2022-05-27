@@ -1,14 +1,15 @@
 .contacts_header {
-	margin-bottom: 21.4rem;
+	@include adaptiveValue(margin-bottom, 21.4, 8);
 }
 
 .contacts_content {
 	flex-direction: column;
-	@include rowGap(13);
+	@include rowGap(13, 7);
 }
 
 .map {
-	height: 476px;
+	width: 100%;
+	@include adaptiveValue(height, 47.6, 35);
 }
 
 .contacts_text {
@@ -27,15 +28,28 @@
 			text-decoration: underline;
 		}
 	}
+
+	@include smDesktop {
+		@include rowGap(3);
+		text-align: center;
+	}
 }
 
 .contacts_form {
-	width: 443px;
+	max-width: 443px;
+
+	@include smDesktop {
+		max-width: 100%;
+	}
 
 	.form_title {
 		display: block;
 		margin-bottom: 6.3rem;
 		@include text-h3;
+
+		@include smDesktop {
+			text-align: center;
+		}
 	}
 
 	.form_content {
@@ -64,16 +78,25 @@
 	}
 
 	input {
-		width: 350px;
-		padding: 0 0 1.6rem;
+		max-width: 350px;
+		padding: 0;
+		@include adaptiveValue(padding-bottom, 1.6, 1);
+
+		@include smDesktop {
+			max-width: 100%;
+		}
 	}
 
 	textarea {
-		height: 134px;
+		@include adaptiveValue(height, 13.4, 10);
 		resize: none;
 	}
 
 	button {
 		max-width: 189px;
+
+		@include smDesktop {
+			max-width: 100%;
+		}
 	}
 }
