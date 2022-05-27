@@ -126,7 +126,8 @@ main {
 	flex: 1 1 auto;
 
 	&.about,
-	&.shop {
+	&.shop,
+	&.contacts {
 		@include adaptiveValue(padding-top, 19, 15);
 	}
 }

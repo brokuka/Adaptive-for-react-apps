@@ -7,20 +7,8 @@
 	flex-direction: column;
 	@include rowGap(13, 7);
 
-	// >:not(:last-child) {
-	// 	@include adaptiveValue(margin-bottom, 13, 7);
-
-	// 	@include tablet {
-	// 		>.row {
-	// 			:first-child {
-	// 				margin-bottom: 2rem;
-	// 			}
-	// 		}
-	// 	}
-	// }
-
 	.row {
-		@include rowGap(2) // gap: 2rem;
+		@include rowGap(2);
 	}
 
 	@include tablet {
