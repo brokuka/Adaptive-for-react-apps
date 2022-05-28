@@ -174,3 +174,36 @@
 	border: 1px solid #AFAFAF;
 	text-align: center;
 }
+
+.btn-cart-count {
+	@include fixedWidthHeight(47);
+	@include text-lg;
+	border: 1px solid #AFAFAF;
+	text-align: center;
+}
+
+.btn-cart_item-remove {
+	position: absolute;
+	top: 50%;
+	left: -4.5rem;
+
+	transform: translateY(-50%);
+
+	@include tablet {
+		top: 2rem;
+		left: initial;
+		right: -4.5rem;
+	}
+}
+
+.btn-coupon {
+	@include text;
+
+	padding: 1.294117647058824em 2.941176470588235em;
+}
+
+.btn-cart-refresh {
+	@include text;
+	width: 100%;
+	padding: 1.294117647058824em 0;
+}

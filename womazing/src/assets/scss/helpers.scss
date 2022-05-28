@@ -127,7 +127,12 @@ main {
 
 	&.about,
 	&.shop,
-	&.contacts {
+	&.contacts,
+	&.cart {
 		@include adaptiveValue(padding-top, 19, 15);
 	}
+}
+
+.stretched {
+	flex: 1 1 auto;
 }

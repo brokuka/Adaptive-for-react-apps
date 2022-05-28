@@ -173,9 +173,13 @@
 	width: calc(($value * 100% / $gridCount));
 }
 
-@mixin createCustomLayout($name: col, $val: $name, $size: null, $gridCount: 12) {
+@mixin createCustomLayout($name: col, $val: $name, $gridCount: 12) {
 	@for $i from 1 through $gridCount {
 		@if ($name==col) {
+			.col-auto {
+				width: auto;
+			}
+
 			.col-#{$i} {
 				@include calcGridPercent($i, $gridCount);
 			}
@@ -183,6 +187,10 @@
 
 		@else {
 			@media (max-width: #{$val}px) {
+				.col-#{$name}-auto {
+					width: auto;
+				}
+
 				.col-#{$name}-#{$i} {
 					@include calcGridPercent($i, $gridCount);
 				}
@@ -217,6 +225,12 @@
 
 @mixin bgDesktop {
 	@media (max-width: #{$desktopLg}px) {
+		@content;
+	}
+}
+
+@mixin wMinMax($min: 320, $max) {
+	@media (min-width: #{$min}px) and (max-width: #{$max}px) {
 		@content;
 	}
 }

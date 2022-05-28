@@ -1,0 +1,200 @@
+.cart_header {
+	@include adaptiveValue(margin-bottom, 21.4, 8);
+}
+
+.cart_content {
+	margin-bottom: 7.2rem;
+
+	.content_header {
+		word-break: break-all;
+		justify-content: space-between;
+		padding-bottom: 2.6rem;
+
+		@include text-h3;
+		color: $black;
+
+		border-bottom: 1px solid #CCC;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	.content_content {
+		word-break: break-all;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 4.9rem;
+		@include rowGap(7);
+
+		@include text;
+		color: $black;
+
+		@include tablet {
+			@include rowGap(1.5);
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		.group {
+			@include columnGap(3.6);
+			flex-wrap: nowrap;
+			align-items: center;
+			padding-left: 4.5rem;
+
+			@include tablet {
+				@include rowGap(2);
+				flex-direction: column;
+				text-align: center;
+				padding-left: 0;
+			}
+
+			.thumbnail {
+				position: relative;
+			}
+		}
+	}
+}
+
+.cart_footer {
+	@include rowGap(8.8, 4);
+	justify-content: flex-end;
+
+	@include smDesktop {
+		justify-content: center;
+		text-align: center;
+	}
+
+	.first-col {
+		justify-content: space-between;
+		@include rowGap(2);
+
+		.group {
+			display: flex;
+			flex-wrap: wrap;
+			@include columnGap(1.6);
+			@include rowGap(2);
+
+			@include smDesktop {
+				justify-content: center;
+			}
+
+			@include mobile {
+				flex-direction: column;
+
+			}
+		}
+	}
+
+	.last-col {
+		@include rowGap(2.8);
+		@include text;
+		flex-direction: column;
+
+		.text-group {
+			@include columnGap(2);
+			display: flex;
+
+			@include smDesktop {
+				justify-content: center;
+			}
+		}
+
+		.group {
+			display: flex;
+			@include columnGap(1.5);
+
+			.btn {
+				flex: 1 1 auto;
+
+				@include smDesktop {
+					flex: initial;
+				}
+			}
+
+			@include smDesktop {
+				@include rowGap(2);
+				flex-direction: column;
+			}
+		}
+
+		.total-price {
+			@include text-h3;
+			display: flex;
+			width: 287px;
+			align-items: center;
+			justify-content: space-around;
+			padding: 16px 10px;
+			word-break: break-all;
+
+			background-color: $color-ecru-white;
+
+			@include smDesktop {
+				justify-content: center;
+				width: 100%;
+			}
+		}
+	}
+
+	input {
+		@include animationEase;
+		font-family: inherit;
+		@include text;
+
+		border: none;
+		border-bottom: 1px solid #868686;
+
+		&:focus {
+			outline: none;
+			border-color: $black;
+		}
+
+		&::placeholder {
+			@include text;
+			color: #868686;
+		}
+	}
+
+	input {
+		max-width: 255px;
+		padding: 0;
+		@include adaptiveValue(padding-bottom, 1.6, 1);
+
+		@include smDesktop {
+			max-width: 100%;
+		}
+	}
+}
+
+.cart_item_price,
+.cart_item_total,
+.cart_total_price {
+	color: $black;
+	word-break: break-all;
+
+	&::before {
+		content: "\0024";
+		color: inherit;
+	}
+}
+
+.cart_item_price::before {
+	@include tablet {
+		content: "Цена: \0024";
+		color: inherit;
+	}
+}
+
+.cart_item_total {
+	@include tablet {
+		display: block;
+		margin-top: 1.5rem;
+	}
+
+	&::before {
+		@include tablet {
+			content: "Всего: \0024";
+			color: inherit;
+		}
+	}
+}

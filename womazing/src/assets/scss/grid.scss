@@ -5,7 +5,7 @@
 
 
 .row {
-	display: flex !important;
+	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 
@@ -43,8 +43,8 @@
 		flex: 1 0 0%;
 	}
 
-	.col-auto {
-		width: auto;
+	.stretched {
+		flex: 1 1 auto;
 	}
 
 	@include createCustomLayout();
