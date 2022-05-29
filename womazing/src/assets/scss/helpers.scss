@@ -128,7 +128,8 @@ main {
 	&.about,
 	&.shop,
 	&.contacts,
-	&.cart {
+	&.cart,
+	&.checkout {
 		@include adaptiveValue(padding-top, 19, 15);
 	}
 }

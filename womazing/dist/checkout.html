@@ -9,7 +9,7 @@
 	
 	<link type="text/css" rel="stylesheet" href="assets/css/style.min.css">
 	
-	<title>Womazing | Cart</title>
+	<title>Womazing | Оформление заказа</title>
 </head>
 
 <body>
@@ -203,111 +203,83 @@
 			</div>
 		</header>
 		
-		<main class="cart">
+		<main class="checkout">
 			<div class="container">
-				<div class="cart_header">
-					<h1 class="page_title">Корзина</h1>
+				<div class="checkout_header">
+					<h1 class="page_title">Оформление заказа</h1>
 					<span class="breadcrumbs">
 						<a class="breadcrumbs_link" href="/index.html">Главная</a>
-						<a class="breadcrumbs_link active" href="">Корзина</a>
+						<a class="breadcrumbs_link" href="/cart.html">Корзина</a>
+						<a class="breadcrumbs_link active" href="">Оформление заказа</a>
 					</span>
 				</div>
 		
-				<div class="cart_content">
-					<div class="row content_header">
-						<div class="col-5 col-tb-5">Товар</div>
-						<div class="col-1 col-tb-auto">Цена</div>
-						<div class="col-2 col-tb-auto">Количество</div>
-						<div class="col-1 col-tb-auto">Всего</div>
-					</div>
-		
-					<div class="row content_content">
-						<div class="col-5 col-tb-12">
-					
-							<div class="row group">
-								<div class="thumbnail">
-									<button class="btn btn-cart_item-remove">
-										<svg class="x_icon">
-											<use xlink:href="#icon_x"></use>
-										</svg>
-									</button>
-									<img class="img" src="assets/images/girls/collection/1.jpg" alt="" width="125" height="179">
-								</div>
-					
-								<span>Футболка USA</span>
-							</div>
-						</div>
-					
-						<div class="col-1 col-tb-auto">
-							<span class="cart_item_price">129</span>
-						</div>
-					
-						<div class="col-2 col-tb-auto">
-							<button class="btn btn-cart-count">1</button>
-						</div>
-					
-						<div class="col-1 col-tb-auto">
-							<span class="cart_item_total">129</span>
-						</div>
-					</div>			<div class="row content_content">
-						<div class="col-5 col-tb-12">
-					
-							<div class="row group">
-								<div class="thumbnail">
-									<button class="btn btn-cart_item-remove">
-										<svg class="x_icon">
-											<use xlink:href="#icon_x"></use>
-										</svg>
-									</button>
-									<img class="img" src="assets/images/girls/collection/1.jpg" alt="" width="125" height="179">
-								</div>
-					
-								<span>Футболка USA</span>
-							</div>
-						</div>
-					
-						<div class="col-1 col-tb-auto">
-							<span class="cart_item_price">129</span>
-						</div>
-					
-						<div class="col-2 col-tb-auto">
-							<button class="btn btn-cart-count">1</button>
-						</div>
-					
-						<div class="col-1 col-tb-auto">
-							<span class="cart_item_total">129</span>
-						</div>
-					</div>		</div>
-		
-				<div class="row cart_footer">
-					<div class="col-12">
+				<div class="row checkout_content">
+					<div class="col-4">
 						<div class="row first-col">
-							<div class="col-6 col-sd-12">
-								<div class="group">
-									<input type="text" placeholder="Введите купон">
-									<button class="btn btn-ghost btn-coupon">Применить купон</button>
+							<div class="user-data">
+								<h3 class="block-title">Данные покупателя</h3>
+		
+								<div class="row input-group">
+									<input type="text" placeholder="Имя">
+									<input type="email" placeholder="E-mail">
+									<input type="tel" placeholder="Телефон">
 								</div>
 							</div>
 		
-							<div class="col-3 col-sd-12">
-								<button class="btn btn-ghost btn-cart-refresh">Обновить корзину</button>
+							<div class="recipient">
+								<div class="block-title">Адрес получателя</div>
+		
+								<div class="row input-group">
+									<input type="text" placeholder="Страна">
+									<input type="text" placeholder="Город">
+									<input type="text" placeholder="Улица">
+									<input type="text" placeholder="Дом">
+									<input type="text" placeholder="Квартира">
+								</div>
+							</div>
+		
+							<div class="user-comment">
+								<div class="block-title">Комментарии</div>
+								<textarea name="" id="" placeholder="Страна"></textarea>
 							</div>
 						</div>
 					</div>
 		
-					<div class="col-6 col-sd-12">
-						<div class="row last-col">
-							<div class="text-group">
-								Подытог: <span class="cart_total_price">129</span>
-							</div>
+					<div class="col-3">
+						<div class="order">
+							<div class="block-title">Ваш заказ</div>
 		
-							<div class="group">
-								<div class="row total-price">
-									<div class="col-4 col-sd-12">Итого:</div>
-									<div class="col-auto"><span class="cart_total_price">129</span></div>
+							<div class="row second-col">
+								<div class="row title-group">
+									<div class="col-7">
+										<h4 class="col-title">Товары</h4>
+									</div>
+		
+									<div class="col-4">
+										<h4 class="col-title">Всего</h4>
+									</div>
 								</div>
 		
-								<a class="btn btn-fill" href="/checkout.html">Оформить заказ</a>
+								<div class="row product">
+									<div class="col-7">
+										<div class="product_name">Футболка USA</div>
+									</div>
+		
+									<div class="col-4">
+										<div class="cost">129</div>
+									</div>
+								</div>
+		
+								<!-- <div class="col-12">
+									<div class="row total-cost">
+										<div class="col-7">Итого</div>
+		
+										<div class="col-4">
+											<h4 class="cost">129</h4>
+										</div>
+									</div>
+								</div> -->
 							</div>
 						</div>
 					</div>

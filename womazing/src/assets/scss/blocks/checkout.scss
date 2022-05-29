@@ -1,0 +1,118 @@
+.checkout_header {
+	@include adaptiveValue(margin-bottom, 21.4, 8);
+}
+
+.checkout_content {
+	justify-content: space-between;
+
+	.block-title {
+		@include text-h3;
+		margin-bottom: 4.7rem;
+	}
+
+	.input-group {
+		@include rowGap(3.5);
+		flex-direction: column;
+	}
+
+	.first-col {
+		flex-direction: column;
+		@include rowGap(8.1);
+	}
+
+	.second-col {
+		@include rowGap(3);
+		flex-direction: column;
+		justify-content: space-between;
+
+		.title-group {
+			justify-content: space-between;
+		}
+
+		.col-title {
+			@include text-h4;
+		}
+
+		.product {
+			@include text;
+			justify-content: space-between;
+			align-items: center;
+			height: min-content;
+		}
+
+		.product_name {
+			@include text;
+		}
+
+		// >[class*=col] {
+		// 	>* {
+		// 		@include text;
+
+		// 		&:not(&:last-child) {
+		// 			margin-bottom: 3rem;
+		// 		}
+		// 	}
+		// }
+
+		.cost {
+			color: $black;
+			word-break: break-all;
+
+			&::before {
+				content: "\0024";
+
+				color: inherit;
+			}
+		}
+
+		.total-cost {
+			align-items: center;
+			justify-content: space-between;
+			padding: 18px 15px;
+
+			background-color: $color-ecru-white;
+
+			word-break: break-all;
+
+			.cost {
+				@include text-h4;
+			}
+		}
+	}
+
+	input,
+	textarea {
+		@include animationEase;
+		font-family: inherit;
+		@include text;
+
+		border: none;
+		border-bottom: 1px solid #868686;
+
+		&:focus {
+			outline: none;
+			border-color: $black;
+		}
+
+		&::placeholder {
+			@include text;
+			color: #868686;
+		}
+	}
+
+	input {
+		width: 100%;
+		padding: 0;
+		@include adaptiveValue(padding-bottom, 1.6, 1);
+
+		@include smDesktop {
+			max-width: 100%;
+		}
+	}
+
+	textarea {
+		@include adaptiveValue(height, 13.4, 10);
+		width: 100%;
+		resize: none;
+	}
+}
