@@ -1,0 +1,74 @@
+.modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include animationEase;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+
+	background-color: rgba($color-primary, .95);
+	visibility: hidden;
+	opacity: 0;
+
+	@include tablet {
+		padding: 0 1.5rem;
+	}
+}
+
+.modal.show {
+	visibility: visible;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.modal_content {
+	display: flex;
+	flex-direction: column;
+	@include rowGap(3.5);
+	width: 491px;
+
+	@include adaptiveValue(padding, 7, 3);
+	background-color: $white;
+
+	text-align: center;
+	position: relative;
+	cursor: auto;
+
+	.btn-close {
+		position: absolute;
+		top: 32px;
+		right: 32px;
+		@include adaptiveValue(right, 3.2, 2.7);
+	}
+}
+
+.modal_title {
+	@include text-h3;
+	color: $black;
+}
+
+.modal_input {
+	@include animationEase;
+	@include text;
+	@include adaptiveValue(padding-bottom, 1.6, 1);
+	width: 100%;
+
+	border: none;
+	border-bottom: 1px solid #868686;
+
+	outline: none;
+
+	&:focus {
+		border-color: $black;
+	}
+
+	&::placeholder {
+		@include text;
+		color: #868686;
+	}
+}

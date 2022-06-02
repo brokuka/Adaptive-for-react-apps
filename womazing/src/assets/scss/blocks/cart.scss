@@ -3,7 +3,13 @@
 }
 
 .cart_content {
+	max-height: 725px;
 	margin-bottom: 7.2rem;
+	overflow-y: auto;
+
+	@include tablet {
+		max-height: 450px;
+	}
 
 	.content_header {
 		word-break: break-all;
